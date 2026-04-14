@@ -26,6 +26,8 @@ jobs:
         run: npm ci
         
       - name: Build with Astro
+        env:
+          BASE_PATH: /
         run: npm run build
 
       - name: Process HTML links
