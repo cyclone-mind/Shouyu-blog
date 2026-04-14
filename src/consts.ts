@@ -1,18 +1,18 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'Friedrich Nietzsche';
-export const SITE_DESCRIPTION = 'The academic portfolio of Friedrich Nietzsche.';
+export const SITE_TITLE = 'Zhou Shouyu';
+export const SITE_DESCRIPTION = 'The portfolio of Zhou Shouyu.';
 
-export const CV_URL = 'https://shravangoswami.com/resume.pdf';
+export const CV_URL = '/cv.pdf';
 
 export const CONTACT = {
-  organization: 'Shravan Goswami',
+  organization: 'Microcyclone',
   addressLines: [
-    'Creator of Astro Scholar',
+    'Senior Software Engineer',
   ],
   emails: [
-    'contact@shravangoswami.com',
+    'syzhou98@foxmail.com',
   ],
 };
 
@@ -25,22 +25,22 @@ export const SOCIAL_LINKS: ReadonlyArray<{
 }> = [
   {
     label: 'GitHub',
-    href: 'https://github.com/shravanngoswamii/astro-scholar',
+    href: 'https://github.com/cyclone/Shouyu-blog',
     icon: 'github',
   },
   {
     label: 'Email',
-    href: 'mailto:contact@shravangoswami.com',
+    href: 'mailto:syzhou98@foxmail.com',
     icon: 'email',
   },
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/shravangoswami/',
-    icon: 'linkedin',
-  },
+  // {
+  //   label: 'LinkedIn',
+  //   href: 'https://www.linkedin.com/in/shravangoswami/',
+  //   icon: 'linkedin',
+  // },
   {
     label: 'X',
-    href: 'https://x.com/shravangoswamii',
+    href: 'https://x.com/Zhoushu9763',
     icon: 'twitter',
   },
 ];
