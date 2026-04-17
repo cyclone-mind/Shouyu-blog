@@ -14,22 +14,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-        
+
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
           node-version: '24'
-      
-      - name: Clean npm cache
-        run: npm cache clean --force
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
       - name: Install dependencies
-        run: npm install --prefer-online
-        
+        run: pnpm install --prefer-offline
+
       - name: Build with Astro
         env:
           BASE_PATH: /
-        run: npm run build
+        run: pnpm run build
 
       - name: Process HTML links
         uses: shravanngoswamii/html-link-action@v1
@@ -41,10 +43,10 @@ jobs:
           external-target-blank: true
           strip-tracking-params: true
           check-links: true
-        
+
       - name: Add .nojekyll file
         run: touch ./dist/.nojekyll
-        
+
       - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
