@@ -13,18 +13,11 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 哈希表 202 快乐数
+[题目链接](https://leetcode.cn/problems/happy-number/description/)
 
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 哈希, 代码随想录, 数据结构与算法, Leetcode, 哈希表
+[文章讲解](https://programmercarl.com/0202.%E5%BF%AB%E4%B9%90%E6%95%B0.html)
 
-## 正文
-题目链接：https://leetcode.cn/problems/happy-number/description/
-
-文章讲解：https://programmercarl.com/0202.%E5%BF%AB%E4%B9%90%E6%95%B0.html
-
-### 题目描述
+## 题目描述
 
 编写一个算法来判断一个数 n 是不是快乐数。
 
@@ -42,7 +35,7 @@ tags:
 6^2 + 8^2 = 100
 1^2 + 0^2 + 0^2 = 1
 
-### 思路
+## 思路
 
 观察到
 
@@ -102,7 +95,7 @@ tags:
 
 * 相遇点不为 1 → 不是快乐数。
 
-```C++
+```cpp
 int getSum(int n) {
     int sum = 0;
     while (n) {

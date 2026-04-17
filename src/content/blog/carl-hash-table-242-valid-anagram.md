@@ -13,16 +13,9 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 哈希表 242 字母的有效异位词
+[题目链接](https://programmercarl.com/0242.%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.html)
 
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 哈希, 代码随想录, 数据结构与算法, Leetcode, 哈希表
-
-## 正文
-题目链接：https://programmercarl.com/0242.%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.html
-
-文章讲解：https://leetcode.cn/problems/valid-anagram/description/
+[文章讲解](https://leetcode.cn/problems/valid-anagram/description/)
 
 ## 题目描述
 
@@ -102,7 +95,7 @@ ok，既然我们决定采用数组，那么我们对于每个字符串都建立
 
 哈希表法其实是把"找字符"这件事用空间换时间，提前统计好，查找和消耗都变成了 O(1) 的操作。
 
-```C++
+```cpp
 bool isAnagram(string s, string t)
 {
     int nums[26] = {0};

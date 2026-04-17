@@ -20,7 +20,7 @@ tags:
 **标签:** 算法笔记, 字符串, 代码随想录, 数据结构与算法, KMP
 
 ## 正文
-#### 题目描述
+## 题目描述
 
 给定一个非空的字符串 s ，检查是否可以通过由它的一个子串重复多次构成。
 
@@ -39,9 +39,9 @@ tags:
 输出: true
 解释: 可由子串 "abc" 重复四次构成。 (或子串 "abcabc" 重复两次构成。)
 
-题目链接：https://leetcode.cn/problems/repeated-substring-pattern/
+[题目链接](https://leetcode.cn/problems/repeated-substring-pattern/)
 
-#### 思考
+## 思考
 
 (移动匹配+库函数)/KMP两种方法。
 
@@ -83,7 +83,7 @@ KMP
 
 **移动匹配**
 
-```C++
+```cpp
 class Solution {
 public:
     bool repeatedSubstringPattern(string s) {
@@ -98,7 +98,7 @@ public:
 
 **KMP**
 
-```C++
+```cpp
 #include <iostream>
 #include <string>
 #include <vector>

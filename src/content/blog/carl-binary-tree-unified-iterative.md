@@ -12,20 +12,13 @@ tags:
   - 数据结构与算法
 ---
 
-# 代码随想录 二叉树：统一迭代
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法
-
-## 正文
-#### 思路
+## 思路
 
 统一迭代法实现前中后序遍历。回想之前的中序遍历、前序遍历和后序遍历。
 
 前序遍历：访问节点就是处理节点，都在栈中
 
-```C++
+```cpp
 while (!st.empty()) {
     TreeNode *node = st.top();
     st.pop();
@@ -37,7 +30,7 @@ while (!st.empty()) {
 
 中序遍历：访问和处理分离，先到最左边，回溯时才能处理
 
-```C++
+```cpp
 while (cur != NULL || !st.empty()) {
     if (cur != NULL) {
         st.push(cur);
@@ -57,7 +50,7 @@ while (cur != NULL || !st.empty()) {
 
 统一把访问和处理分离，把需要处理的节点打上`nullptr`标记；
 
-```C++
+```cpp
 while (!st.empty()) {
     TreeNode *node = st.top();
     if (node != nullptr) {
@@ -74,7 +67,7 @@ while (!st.empty()) {
 
 中序遍历：统一迭代
 
-```C++
+```cpp
 class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {

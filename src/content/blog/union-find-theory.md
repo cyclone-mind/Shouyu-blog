@@ -13,22 +13,13 @@ tags:
   - Leetcode
 ---
 
-# 并查集理论基础
-
-**发布日期:** 2025/12/21
-**阅读时间:** 3 分钟
-**标签:** 算法笔记, 图论, 数据结构, 算法, 并查集, Union-Find, Leetcode
-
-## 正文
-# 并查集理论基础
-
-#### 并查集两个主要功能
+## 并查集两个主要功能
 
 * 将两个元素添加到一个集合中
 
 * 判断两个元素是否在同一个集合
 
-#### 背景
+### 背景
 
 为什么传统的数组、set、map方法不适合解决"动态连通性"问题
 
@@ -44,7 +35,7 @@ tags:
 
 多个数组可能这样：
 
-```C++
+```cpp
 vector<int> group1 = {1, 3, 5, 7};
 vector<int> group2 = {2, 4, 6};
 vector<int> group3 = {8, 9, 10};
@@ -53,7 +44,7 @@ vector<int> group3 = {8, 9, 10};
 
 二维数组可能这样：
 
-```C++
+```cpp
 vector<vector<int>> groups = {
     {1, 3, 5, 7},    // 第一个集合
     {2, 4, 6},       // 第二个集合
@@ -63,7 +54,7 @@ vector<vector<int>> groups = {
 
 判断两个元素是否在同一集合：
 
-```C++
+```cpp
 bool inSameSet(int a, int b) {
     for (int i = 0; i < groups.size(); i++) {
         bool hasA = false, hasB = false;
@@ -79,7 +70,7 @@ bool inSameSet(int a, int b) {
 
 添加元素到某个集合：
 
-```C++
+```cpp
 void addToSet(int element, int target) {
     // 需要先遍历所有集合，找到target在哪个集合
     for (int i = 0; i < groups.size(); i++) {
@@ -101,11 +92,11 @@ void addToSet(int element, int target) {
 
 把**集合的概念抽象出来**，**只要元素能连通，那就是在一个集合中**。尽管这个集合非真实存在。
 
-##### 将两个元素添加到集合中
+### 将两个元素添加到集合中
 
 也就是将两个元素练成的边添加到集合
 
-```C++
+```cpp
 // 将v，u 这条边加入并查集
 void join(int u, int v) {
     u = find(u); // 寻找u的根
@@ -115,9 +106,9 @@ void join(int u, int v) {
 }
 ```
 
-##### 寻根
+### 寻根
 
-```C++
+```cpp
 // 并查集里寻根的过程
 int find(int u) {
     if (u == father[u]) return u; // 如果根就是自己，直接返回
@@ -125,11 +116,11 @@ int find(int u) {
 }
 ```
 
-##### 初始化
+### 初始化
 
 默认自己指向自己
 
-```C++
+```cpp
 // 并查集初始化
 void init() {
     for (int i = 0; i < n; ++i) {
@@ -138,9 +129,9 @@ void init() {
 }
 ```
 
-##### 判断两个元素是否在同一个集合
+### 判断两个元素是否在同一个集合
 
-```C++
+```cpp
 // 判断 u 和 v是否找到同一个根
 bool isSame(int u, int v) {
     u = find(u);
@@ -149,7 +140,7 @@ bool isSame(int u, int v) {
 }
 ```
 
-#### 路径压缩
+### 路径压缩
 
 find 函数的过程中，通过递归的方式，不断获取father数组下标对应的数值，最终找到这个集合的根。
 
@@ -157,7 +148,7 @@ find 函数的过程中，通过递归的方式，不断获取father数组下标
 
 只需要在递归的过程中，让 father[u] 接住 递归函数 find(father[u]) 的返回结果。
 
-```C++
+```cpp
 int find(int u){
     if(u == father[u]) return u;
     else return father[u] = find(father[u]);
@@ -169,15 +160,15 @@ int find(int u) {
 }
 ```
 
-#### 复杂度
+### 复杂度
 
 路径压缩后的并查集时间复杂度在O(logn)与O(1)之间，且随着查询或者合并操作的增加，时间复杂度会越来越趋于O(1)。
 
-#### 代码实现
+## 代码实现
 
 整体并查集模板
 
-```C++
+```cpp
 int n = 1005; // n根据题目中节点数量而定，一般比节点数量大一点就好
 vector<int> father = vector<int> (n, 0); // C++里的一种数组结构
 
@@ -216,13 +207,13 @@ void join(int u, int v) {
 
 1. 判断两个节点是否在同一个集合
 
-#### 常见误区
+## 常见误区
 
 isSame 和 join 函数都有，找根的代码，那能够服用吗？
 
 错误代码
 
-```C++
+```cpp
 // 判断 u 和 v是否找到同一个根
 bool isSame(int u, int v) {
     u = find(u);
@@ -239,7 +230,7 @@ void join(int u, int v) {
 
 这样做会导致生成错误的图。举例
 
-```C++
+```cpp
 join(1,2);
 join(3,2);
 ```

@@ -15,16 +15,7 @@ tags:
   - Leetcode
 ---
 
-# Bellman-Ford之判断负权回路
-
-**发布日期:** 2025/12/21
-**阅读时间:** 3 分钟
-**标签:** 算法笔记, 图论, 数据结构, 算法, 最短路算法, Bellman-Ford算法, 负权回路, Leetcode
-
-## 正文
-# Bellman-Ford之判断负权回路
-
-#### 题目描述
+## 题目描述
 
 某国为促进城市间经济交流，决定对货物运输提供补贴。共有 n 个编号为 1 到 n 的城市，通过道路网络连接，网络中的道路仅允许从某个城市单向通行到另一个城市，不能反向通行。
 
@@ -36,17 +27,17 @@ tags:
 
 **城市 1 到城市 n 之间可能会出现没有路径的情况**
 
-题目链接：https://kamacoder.com/problempage.php?pid=1153
+[题目链接](<https://kamacoder.com/problempage.php?pid=1153>)
 
-文章链接：https://programmercarl.com/kamacoder/0095.%E5%9F%8E%E5%B8%82%E9%97%B4%E8%B4%A7%E7%89%A9%E8%BF%90%E8%BE%93II.html
+[文章链接](<https://programmercarl.com/kamacoder/0095.%E5%9F%8E%E5%B8%82%E9%97%B4%E8%B4%A7%E7%89%A9%E8%BF%90%E8%BE%93II.html>)
 
-#### 思考
+## 思考
 
 本题是bellman-Ford 的存在负权回路的场景。
 
 以示例说明
 
-问图中 节点1 到 节点4 的最短路径是多少（题目中的最低运输成本） （注意边可以为负数的）？
+问图中 节点1 到 节点4 的最短路径是多少（题目中的最低运输成本） （注意边可以为负数的）
 
 我们正常情况可以是节点1 -> 节点2 -> 节点3 -> 节点4，这样的路径总成本为 -1 + 1 + 1 = 1。
 
@@ -60,7 +51,7 @@ tags:
 
 所以说最短路径问题的**前提**：图中不存在从源点可达的负权回路
 
-#### 实现步骤
+## 实现步骤
 
 所以怎么做？在未优化的算法中，进行第n次尝试松弛判断负权回路，若发现仍和可更新：`(minDist[from] != INT_MAX && minDist[to] > minDist[from] + price`那么就是有负权回路。
 
@@ -70,11 +61,11 @@ tags:
 
 所以只需要一个数组记录节点添加到队列中多少次即可：`vector<int> count(n+1, 0);`，在成功松弛后添加到队列中后计数器+1，随后判断计数器是否达到了第n次即可。
 
-#### 代码实现
+## 代码实现
 
-##### Bellman-ford
+### Bellman-ford
 
-```C++
+```cpp
 #include <cstdint>
 #include <iostream>
 #include <vector>
@@ -141,9 +132,9 @@ int main() {
 }
 ```
 
-##### SPFA
+### SPFA
 
-```C++
+```cpp
 /*
 Bellman_ford 队列优化算法 ，也叫SPFA算法（Shortest Path Faster Algorithm）
 */

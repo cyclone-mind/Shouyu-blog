@@ -14,16 +14,9 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 数组：997. 有序数组的平方
+[题目链接](https://leetcode.cn/problems/squares-of-a-sorted-array/)
 
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 数组, 代码随想录, 数据结构与算法, Leetcode
-
-## 正文
-题目链接：https://leetcode.cn/problems/squares-of-a-sorted-array/
-
-文章讲解：https://programmercarl.com/0977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.html
+[文章讲解](https://programmercarl.com/0977.%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9.html)
 
 题目：给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。
 
@@ -41,11 +34,11 @@ tags:
 
 * 输出：[4,9,9,49,121]
 
-#### 思路
+## 思路
 
 有了前面双指针的思路，我们看到这道题是非递减排序，那么如果把每个数字都平方之后，它们的值应该是从大到小再到最大，那么我们可以有两个指针分在两侧，然后依次比较左右两侧指针指向的值的绝对值的大小，大的值放到新数组，然后移动大值对应的指针，这样循环下来即可。
 
-```C++
+```cpp
 #include <vector>
 #include <iostream>
 using namespace std;
@@ -97,6 +90,6 @@ class Solution:
 #空间复杂度：O(logn)。除了存储答案的数组以外，我们需要 O(logn) 的栈空间进行排序
 ```
 
-#### 启发
+## 启发
 
 1. 还是有序数组，也许可以考虑双指针

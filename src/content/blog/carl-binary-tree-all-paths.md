@@ -12,24 +12,17 @@ tags:
   - 数据结构与算法
 ---
 
-# 代码随想录 二叉树：所有路径
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法
-
-## 正文
-#### 题目描述
+## 题目描述
 
 给定一个二叉树，返回所有从根节点到叶子节点的路径。
 
 说明: 叶子节点是指没有子节点的节点。
 
-题目链接：https://leetcode.cn/problems/binary-tree-paths/
+[题目链接](https://leetcode.cn/problems/binary-tree-paths/)
 
-文章讲解：https://programmercarl.com/0257.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%89%80%E6%9C%89%E8%B7%AF%E5%BE%84.html
+[文章讲解](https://programmercarl.com/0257.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%89%80%E6%9C%89%E8%B7%AF%E5%BE%84.html)
 
-#### 思考
+## 思考
 
 根节点到叶子节点的路径，先处理根节点，在处理叶子节点，所以前序遍历。
 
@@ -49,9 +42,9 @@ tags:
 
 先处理中间节点，即当前遍历到的节点，加入到path中。随后是递归和回溯。当前节点有左子节点，就递归且回溯。右子节点同理
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     void traversal(TreeNode* node, vector<string>& result,vector<int>& path){

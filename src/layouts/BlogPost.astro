@@ -181,6 +181,14 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 					linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
 				scrollbar-color: rgba(148, 163, 184, 0.75) transparent;
 			}
+			.prose :global(pre.astro-code),
+			.prose :global(pre.astro-code span) {
+				color: var(--shiki-light) !important;
+				background-color: var(--shiki-light-bg) !important;
+				font-style: var(--shiki-light-font-style) !important;
+				font-weight: var(--shiki-light-font-weight) !important;
+				text-decoration: var(--shiki-light-text-decoration) !important;
+			}
 			html[data-theme='dark'] .prose :global(pre.astro-code) {
 				border-color: rgba(148, 163, 184, 0.24);
 				box-shadow: 0 20px 45px rgba(2, 6, 23, 0.4);

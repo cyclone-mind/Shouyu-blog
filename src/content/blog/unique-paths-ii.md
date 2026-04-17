@@ -13,16 +13,7 @@ tags:
   - Leetcode
 ---
 
-# 不同路径II
-
-**发布日期:** 2025/12/21
-**阅读时间:** 3 分钟
-**标签:** 算法笔记, 动态规划, 算法, 路径问题, 障碍物, Leetcode
-
-## 正文
-# 不同路径II
-
-#### 题目描述
+## 题目描述
 
 给定一个`m x n`的整数数组`grid`。一个机器人初始位于**左上角**（即`grid[0][0]`）。机器人尝试移动到**右下角**（即`grid[m - 1][n - 1]`）。机器人每次只能向下或者向右移动一步。
 
@@ -43,21 +34,21 @@ tags:
 2. 向下 -> 向下 -> 向右 -> 向右
 ```
 
-题目链接：https://leetcode.cn/problems/unique-paths-ii
+[题目链接](https://leetcode.cn/problems/unique-paths-ii)
 
-文章讲解：https://programmercarl.com/0063.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84II.html
+[文章讲解](https://programmercarl.com/0063.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84II.html)
 
-#### 思路
+## 思路
 
 这道题与上一道题版本不同的是有了障碍物。那么，从dp数组的角度就可以考虑有障碍物的 dp 值为 0。
 
-#### 动规五部曲
+## 递归五部曲
 
-##### 1、dp数组及下标含义
+### 1、dp数组及下标含义
 
 `dp[i][j]`表示从`(0, 0)`出发到达`(i,j)`位置有`dp[i][j]`条不同的路径。
 
-##### 2.、递归公式
+### 2、递归公式
 
 `dp[i][j] = dp[i-1][j]+dp[i][j-1]`
 
@@ -65,29 +56,29 @@ tags:
 
 如果 (i,j) 是障碍，那么我们就不用计算`dp[i][j]`。直接将`dp[i][j]`设置为0，或者保持0不变
 
-##### 3、dp数组初始化
+### 3、dp数组初始化
 
 初始任何位置都为0。然后边界任何位置都为1，但是有特殊情况就是边界如果有障碍，那么障碍以后包括障碍也都是0了
 
 所以
 
-```C++
+```cpp
 vector<vector<int>> dp(m, ector<int>(n,0));
 for (int i = 0; i < m && obstacleGrid[i][0] == 0; i++) dp[i][0] = 1;
 for (int j = 0; j < n && obstacleGrid[0][j] == 0; j++) dp[0][j] = 1;
 ```
 
-##### 4、确定遍历顺序
+### 4、确定遍历顺序
 
 从递推公式看依然是从上到下，从左到右，所以从左向右一层一层遍历即可
 
 这样保证推导`dp[i][j]`的时候，`dp[i - 1][j]`和`dp[i][j - 1]`一定是有数值。
 
-##### 5、举例推导
+### 5、举例推导
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
@@ -117,7 +108,7 @@ public:
 
 #### 空间优化
 
-```C++
+```cpp
 // 优化版：使用一维数组
 int uniquePathsWithObstaclesOptimized(vector<vector<int>> &obstacleGrid) {
     int m = obstacleGrid.size();

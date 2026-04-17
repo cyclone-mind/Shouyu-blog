@@ -12,23 +12,13 @@ tags:
   - 数据结构与算法
 ---
 
-# 代码随想录 二叉树：平衡二叉树
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法
-
-## 摘要
-是否平衡二叉树
-
-## 正文
-#### 题目描述
+## 题目描述
 
 给定一个二叉树，判断它是否是 平衡二叉树
 
-题目链接：https://leetcode.cn/problems/balanced-binary-tree
+[题目链接](https://leetcode.cn/problems/balanced-binary-tree)
 
-文章讲解：https://programmercarl.com/0110.%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91.html
+[文章讲解](https://programmercarl.com/0110.%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91.html)
 
 平衡二叉树是树中任意节点左右子树的高度相差不超过1。
 
@@ -58,9 +48,9 @@ tags:
 
 最后将根节点传入该递归函数，就可以获取整棵树的高度或者-1。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     int getheight(TreeNode* node) {

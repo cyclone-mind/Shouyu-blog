@@ -24,11 +24,11 @@ tags:
 给定一个字符串 s，它包含小写字母和数字字符，请编写一个函数，将字符串中的字母字符保持不变，而将每个数字字符替换为 number。
 
 ## 正文
-题目链接：https://kamacoder.com/problempage.php?pid=1064
+[题目链接](https://kamacoder.com/problempage.php?pid=1064)
 
-文章讲解：https://programmercarl.com/kamacoder/0054.%E6%9B%BF%E6%8D%A2%E6%95%B0%E5%AD%97.html
+[文章讲解](https://programmercarl.com/kamacoder/0054.%E6%9B%BF%E6%8D%A2%E6%95%B0%E5%AD%97.html)
 
-### 题目描述
+## 题目描述
 
 给定一个字符串 s，它包含小写字母和数字字符，请编写一个函数，将字符串中的字母字符保持不变，而将每个数字字符替换为 number。
 
@@ -46,7 +46,7 @@ tags:
 
 数据范围：1 <= s.length < 10000。
 
-### 思路
+## 思路
 
 首先应该遍历找到所有数字的个数，然后进行数组（字符数组）扩容，扩容多少倍？因为要去掉数字加上'number'，所以是加上 5*数字的个数。
 
@@ -58,7 +58,7 @@ tags:
 
 ### 参考代码
 
-```C++
+```cpp
 #include <string>
 #include <iostream>
 using namespace std;

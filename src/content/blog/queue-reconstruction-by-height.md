@@ -13,26 +13,17 @@ tags:
   - Leetcode
 ---
 
-# 根据身高重建队列
-
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 贪心, 算法, 贪心算法, 排序, 队列, Leetcode
-
-## 正文
-# 根据身高重建队列
-
-#### 题目描述
+## 题目描述
 
 假设有打乱顺序的一群人站成一个队列，数组`people`表示队列中一些人的属性（不一定按顺序）。每个`people[i] = [hi, ki]`表示第`i`个人的身高为`hi`，前面**正好**有`ki`个身高大于或等于`hi`的人。
 
 请你重新构造并返回输入数组`people`所表示的队列。返回的队列应该格式化为数组`queue`，其中`queue[j] = [hj, kj]`是队列中第`j`个人的属性（`queue[0]`是排在队列前面的人）。
 
-题目链接：https://leetcode.cn/problems/queue-reconstruction-by-height/
+[题目链接](https://leetcode.cn/problems/queue-reconstruction-by-height/)
 
-文章讲解：https://programmercarl.com/0406.%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E5%88%97.html
+[文章讲解](https://programmercarl.com/0406.%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E5%88%97.html)
 
-#### 思考
+## 思考
 
 我们发现queue中，一个人的顺序取决于两个属性，身高h和前面的个数k。另外说了“前面**正好**有ki 个身高不比他矮的人”，即前面的不能比他矮。
 
@@ -52,7 +43,7 @@ tags:
 
 排序时的策略
 
-```C++
+```cpp
 static bool cmp(const vector<int> &a, const vector<int> &b) {
     if (a[0] == b[0])
         return a[1] < b[1];  // 身高相同，按ki升序
@@ -60,7 +51,7 @@ static bool cmp(const vector<int> &a, const vector<int> &b) {
 }
 ```
 
-##### 为什么要这样排序？
+### 为什么要这样排序？
 
 1. 按身高降序排列：
 
@@ -112,7 +103,7 @@ flowchart TD
 
 此时就按照题目的要求完成了重新排列
 
-##### 为什么身高相同时按ki升序？
+### 为什么身高相同时按ki升序？
 
 考虑身高相同的人：[5,0], [5,2]
 
@@ -134,9 +125,9 @@ flowchart TD
 
 这就是为什么身高相同时要按ki升序排列。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     static bool cmp(const vector<int>& a,const vector<int>& b){

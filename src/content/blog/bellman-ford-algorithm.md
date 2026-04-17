@@ -15,16 +15,7 @@ tags:
   - Leetcode
 ---
 
-# Bellman-Ford算法
-
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 图论, 数据结构, 算法, 最短路算法, Bellman-Ford算法, 负权边, Leetcode
-
-## 正文
-# Bellman-Ford算法
-
-#### 题目描述
+## 题目描述
 
 某国为促进城市间经济交流，决定对货物运输提供补贴。共有 n 个编号为 1 到 n 的城市，通过道路网络连接，网络中的道路仅允许从某个城市单向通行到另一个城市，不能反向通行。
 
@@ -34,27 +25,27 @@ tags:
 
 **城市 1 到城市 n 之间可能会出现没有路径的情况，同时保证道路网络中不存在任何负权回路。**
 
-###### 输入描述
+### 输入描述
 
 第一行包含两个正整数，第一个正整数 n 表示该国一共有 n 个城市，第二个整数 m 表示这些城市中共有 m 条道路。
 
 接下来为 m 行，每行包括三个整数，s、t 和 v，表示 s 号城市运输货物到达 t 号城市，道路权值为 v （单向图）。
 
-###### 输出描述
+### 输出描述
 
 如果能够从城市 1 到连通到城市 n， 请输出一个整数，表示运输成本。如果该整数是负数，则表示实现了盈利。如果从城市 1 没有路径可达城市 n，请输出 "unconnected"。
 
-题目链接：https://kamacoder.com/problempage.php?pid=1152
+[题目链接](https://kamacoder.com/problempage.php?pid=1152)
 
-文章讲解：https://programmercarl.com/kamacoder/0094.%E5%9F%8E%E5%B8%82%E9%97%B4%E8%B4%A7%E7%89%A9%E8%BF%90%E8%BE%93I.html
+[文章讲解](https://programmercarl.com/kamacoder/0094.%E5%9F%8E%E5%B8%82%E9%97%B4%E8%B4%A7%E7%89%A9%E8%BF%90%E8%BE%93I.html)
 
-#### 思考
+## 思考
 
 这道题是**经典的带负权值的单源最短路问题，Bellman_ford可以解决**
 
 核心思想：**对所有边松弛n-1次**
 
-##### 松弛
+## 松弛
 
 如果 通过 A 到 B 这条边可以获得更短的从起始节点到达B节点的路径，即如果`minDist[B] > minDist[A] + value`，那么我们就更新`minDist[B] = minDist[A] + value`，**这个过程就叫做 “松弛**” 。
 
@@ -68,9 +59,9 @@ tags:
 
 而从节点1到达节点n最多需要n-1条边，因为是单向的不能返回。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 #include <cstdint>
 #include <iostream>
 #include <vector>
@@ -119,11 +110,11 @@ int main() {
 }
 ```
 
-#### 易错点
+## 易错点
 
 初始化边时不要给定边的数量，不要这样写：
 
-```C++
+```cpp
 vector<Edge> edges(m);  // 先创建了m个默认边
 while (m--) {
     cin >> s >> t >> v;
@@ -137,13 +128,13 @@ while (m--) {
 
 所以不指定数量就ok
 
-```C++
+```cpp
 vector<Edge> edges;
 ```
 
 还可以更简便一点，不用构造函数，直接使用这个简单的结构体就行了。
 
-```C++
+```cpp
 struct Edge {
     int p1;
     int p2;

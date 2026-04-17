@@ -12,16 +12,8 @@ tags:
   - Floyd算法
 ---
 
-# Floyd算法
 
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 图论, 数据结构, 算法, 最短路算法, Floyd算法, 全源最短路, Leetcode
-
-## 正文
-# Floyd算法
-
-#### 题目描述
+## 题目描述
 
 小明喜欢去公园散步，公园内布置了许多的景点，相互之间通过小路连接，小明希望在观看景点的同时，能够节省体力，走最短的路径。
 
@@ -29,11 +21,11 @@ tags:
 
 小明有 Q 个观景计划，每个计划都有一个起点 start 和一个终点 end，表示他想从景点 start 前往景点 end。由于小明希望节省体力，他想知道每个观景计划中从起点到终点的最短路径长度。 请你帮助小明计算出每个观景计划的最短路径长度。
 
-题目链接：https://kamacoder.com/problempage.php?pid=1155
+[题目链接](https://kamacoder.com/problempage.php?pid=1155)
 
-文章讲解：https://programmercarl.com/kamacoder/0097.%E5%B0%8F%E6%98%8E%E9%80%9B%E5%85%AC%E5%9B%AD.html
+[文章讲解](https://programmercarl.com/kamacoder/0097.%E5%B0%8F%E6%98%8E%E9%80%9B%E5%85%AC%E5%9B%AD.html)
 
-#### 思考
+## 思考
 
 本题是多源最短路径问题
 
@@ -63,7 +55,7 @@ tags:
 
 是不是 要选一个最小的，毕竟是求最短路。
 
-##### 动规五部曲
+### 递归五部曲
 
 ##### 1、确定dp数组及下标含义
 
@@ -113,7 +105,7 @@ tags:
 
 从递推公式上看
 
-```C++
+```cpp
 如果 本层刚计算好的 grid[i][k] 比上一层 （即k-1层）计算的 grid[i][k] 小，说明确实有 i 到 k 的更短路径，那么基于 更小的 grid[i][k] 去计算 gird[i][j] 没有问题。
 
 如果 本层刚计算好的 grid[i][k] 比上一层 （即k-1层）计算的 grid[i][k] 大， 这不可能，因为这样也不会做更新 grid[i][k]的操作。
@@ -121,7 +113,7 @@ tags:
 
 所以递推公式可以是
 
-```C++
+```cpp
 grid[i][j] = min(grid[i][j], grid[i][k] + grid[k][j]);
 ```
 
@@ -129,7 +121,7 @@ grid[i][j] = min(grid[i][j], grid[i][k] + grid[k][j]);
 
 二维数组版本
 
-```C++
+```cpp
 #include <iostream>
 #include <vector>
 using namespace std;

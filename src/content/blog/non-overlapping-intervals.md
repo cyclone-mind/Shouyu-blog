@@ -14,20 +14,17 @@ tags:
   - Leetcode
 ---
 
-## 正文
-# 无重叠区间
-
-#### 题目描述
+## 题目描述
 
 给定一个区间的集合`intervals`，其中`intervals[i] = [starti, endi]`。返回*需要移除区间的最小数量，使剩余区间互不重叠*。
 
 **注意**只在一点上接触的区间是**不重叠的**。例如`[1, 2]`和`[2, 3]`是不重叠的。
 
-题目链接：https://leetcode.cn/problems/non-overlapping-intervals/
+[题目链接](https://leetcode.cn/problems/non-overlapping-intervals/)
 
-文章讲解：https://programmercarl.com/0435.%E6%97%A0%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4.html
+[文章讲解](https://programmercarl.com/0435.%E6%97%A0%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4.html)
 
-#### 思考
+## 思考
 
 问题最终状态是需要达到剩余区间互不重叠，且移除区间尽可能少，换句话说就是剩余区间尽可能多。
 
@@ -51,11 +48,11 @@ tags:
 
 * 如果不重叠，则什么都不做，继续遍历
 
-#### 代码实现
+## 代码实现
 
 左边界排序
 
-```C++
+```cpp
 static bool cmp(const vector<int> &a, const vector<int> &b) {
     return a[0] < b[0];
 }
@@ -83,7 +80,7 @@ int eraseOverlapIntervals(vector<vector<int>> &intervals) {
 
 右边界排序
 
-```C++
+```cpp
 static bool cmp(const vector<int> &a, const vector<int> &b) {
     return a[1] < b[1];  // 按照右边界排序
 }
@@ -105,7 +102,7 @@ int eraseOverlapIntervals(vector<vector<int>> &intervals) {
 }
 ```
 
-##### 按左边界排序的特点：
+### 按左边界排序的特点：
 
 ```mermaid
 graph TD
@@ -143,7 +140,7 @@ graph TD
 
 1. 贪心策略：优先选择结束位置早的区间，为后续区间留出更多空间
 
-##### 实例对比分析
+### 实例对比分析
 
 考虑区间：[[1,2],[2,3],[3,4],[1,3]]
 
@@ -172,7 +169,7 @@ graph TD
 结果：移除1个区间
 ```
 
-##### 算法正确性分析
+### 算法正确性分析
 
 按左边界排序的正确性：
 
@@ -186,7 +183,7 @@ graph TD
 
 * 这是经典的贪心算法思路，用于解决区间调度问题
 
-#### 时间复杂度和空间复杂度
+## 时间复杂度和空间复杂度
 
 按左边界排序：
 
@@ -200,7 +197,7 @@ graph TD
 
 * 空间复杂度：O(1)（不考虑排序空间）
 
-##### 8. 结论
+### 结论
 
 两种排序方式都能正确解决问题，但有以下区别：
 

@@ -15,26 +15,17 @@ tags:
   - Leetcode
 ---
 
-# A*算法
-
-**发布日期:** 2025/12/21
-**阅读时间:** 5 分钟
-**标签:** 算法笔记, 图论, 数据结构, 算法, 启发式搜索, A*算法, 路径规划, Leetcode
-
-## 正文
-# A*算法
-
-#### 题目描述
+## 题目描述
 
 在象棋中，马和象的移动规则分别是“马走日”和“象走田”。现给定骑士的起始坐标和目标坐标，要求根据骑士的移动规则，计算从起点到达目标点所需的最短步数。
 
 棋盘大小 1000 x 1000（棋盘的 x 和 y 坐标均在 [1, 1000] 区间内，包含边界）
 
-题目链接：https://kamacoder.com/problempage.php?pid=1203
+[题目链接](https://kamacoder.com/problempage.php?pid=1203)
 
-文章讲解：https://programmercarl.com/kamacoder/0126.%E9%AA%91%E5%A3%AB%E7%9A%84%E6%94%BB%E5%87%BBastar.html
+[文章讲解](https://programmercarl.com/kamacoder/0126.%E9%AA%91%E5%A3%AB%E7%9A%84%E6%94%BB%E5%87%BBastar.html)
 
-#### 思考
+## 思考
 
 这道题是给定起点和终点，计算最短步数。适用于广搜。
 
@@ -64,9 +55,9 @@ tags:
 
 典型场景：道路网络
 
-##### 广搜的代码
+## 广搜的代码
 
-```C++
+```cpp
 #include<iostream>
 #include<queue>
 #include<string.h>
@@ -152,7 +143,7 @@ H：目前遍历的节点到达终点的距离
 
 1. 切比雪夫距离，计算方式：d = max(abs(x1 - x2), abs(y1 - y2))
 
-#### 代码实现
+## 代码实现
 
 实现步骤
 
@@ -200,7 +191,7 @@ H：目前遍历的节点到达终点的距离
 
 1. 不越界，也未访问过，就更新moves，并把这个节点加入到队列中
 
-```C++
+```cpp
 #include<iostream>
 #include<queue>
 #include<string.h>
@@ -275,7 +266,7 @@ int main()
 }
 ```
 
-```C++
+```cpp
 #include <climits>
 #include <cmath>
 #include <iostream>

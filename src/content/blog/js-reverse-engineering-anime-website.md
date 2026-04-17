@@ -10,7 +10,6 @@ tags:
 ---
 
 ## 正文
-# JS逆向之某日漫网站
 
 网址：aHR0cHM6Ly9zcC5tYW5nYS5uaWNvdmlkZW8uanAvd2F0Y2gvbWc5MDQ3NDM=
 

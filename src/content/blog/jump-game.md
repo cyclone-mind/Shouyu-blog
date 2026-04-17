@@ -13,10 +13,7 @@ tags:
   - Leetcode
 ---
 
-## 正文
-# 跳跃游戏
-
-#### 题目描述
+## 题目描述
 
 给定一个非负整数数组，你最初位于数组的第一个位置。
 
@@ -24,13 +21,13 @@ tags:
 
 判断你是否能够到达最后一个位置。
 
-题目链接：https://leetcode.cn/problems/jump-game/
+[题目链接](https://leetcode.cn/problems/jump-game/)
 
-文章讲解：https://programmercarl.com/0055.%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F.html
+[文章讲解](https://programmercarl.com/0055.%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F.html)
 
-#### 思考
+## 思考
 
-##### 贪心解法
+### 贪心解法
 
 示例  1:
 
@@ -54,9 +51,9 @@ tags:
 
 局部最优解：每次移动都选择最大的覆盖范围
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 bool canJump(vector<int>& nums){
     int cover = 0;
     for(int i = 0;i<=cover;i++){

@@ -12,16 +12,7 @@ tags:
   - Leetcode
 ---
 
-# 不相交的线
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 动态规划, 算法, 最长公共子序列, 线性DP, Leetcode
-
-## 正文
-# 不相交的线
-
-#### 题目描述
+## 题目描述
 
 在两条独立的水平线上按给定的顺序写下 nums1 和 nums2 中的整数。
 
@@ -35,19 +26,19 @@ tags:
 
 以这种方法绘制线条，并返回可以绘制的最大连线数。
 
-题目链接：https://leetcode.cn/problems/uncrossed-lines/
+[题目链接](https://leetcode.cn/problems/uncrossed-lines/)
 
-文章讲解：https://programmercarl.com/1035.%E4%B8%8D%E7%9B%B8%E4%BA%A4%E7%9A%84%E7%BA%BF.html
+[文章讲解](https://programmercarl.com/1035.%E4%B8%8D%E7%9B%B8%E4%BA%A4%E7%9A%84%E7%BA%BF.html)
 
-#### 思路
+## 思路
 
 绘制线段说明要找到相同的两个元素，而直线不能相交就是要找子序列，子序列不能改变相对顺序。
 
 **本质上是求两个字符串的最长公共子序列**
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 int maxUncrossedLines(vector<int> &nums1, vector<int> &nums2) {
     int m = nums1.size(), n = nums2.size();
     vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));

@@ -133,6 +133,10 @@ const highlights = ['Markdown', 'Shiki code blocks', 'Generated TOC'];
 + Template-aware prose styles make the showcase easier to review.
 ```
 
+```python
+print("hello,world!")
+```
+
 ## HTML Inside Markdown
 
 Raw HTML is also available when you need something markdown alone does not express cleanly.

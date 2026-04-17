@@ -20,15 +20,15 @@ tags:
 **标签:** 算法笔记, 栈和队列, 代码随想录, 数据结构与算法, 栈与队列
 
 ## 正文
-#### 题目描述
+## 题目描述
 
 给你一个整数数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。
 
 返回 滑动窗口中的最大值 。
 
-题目链接：https://leetcode.cn/problems/sliding-window-maximum文章讲解：https://programmercarl.com/0239.%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC.html
+[题目链接](https://leetcode.cn/problems/sliding-window-maximum[文章讲解]https://programmercarl.com/0239.%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC.html)
 
-#### 思路
+## 思路
 
 正常思路，维护一个k大小的容器，如数组，移动的时候需要，添加右侧新元素，删除最靠左的旧元素，线性查找找到窗口内最大值。这样时间复杂度是 O(n*k)。
 
@@ -50,9 +50,9 @@ tags:
 
 通过如上规则，每次窗口移动就可以通过  front() 就拿到最大值。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     class MyQue {

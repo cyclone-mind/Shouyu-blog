@@ -12,10 +12,7 @@ tags:
   - Leetcode
 ---
 
-## 正文
-# 最后一块石头的重量
-
-#### 题目描述
+## 题目描述
 
 有一堆石头，用整数数组`stones`表示。其中`stones[i]`表示第`i`块石头的重量。
 
@@ -39,11 +36,11 @@ tags:
 组合 1 和 1，得到 0，所以数组转化为 [1]，这就是最优值。
 ```
 
-题目链接：https://leetcode.cn/problems/last-stone-weight-ii/
+[题目链接](https://leetcode.cn/problems/last-stone-weight-ii/)
 
-文章讲解：https://programmercarl.com/1049.%E6%9C%80%E5%90%8E%E4%B8%80%E5%9D%97%E7%9F%B3%E5%A4%B4%E7%9A%84%E9%87%8D%E9%87%8FII.html
+[文章讲解](https://programmercarl.com/1049.%E6%9C%80%E5%90%8E%E4%B8%80%E5%9D%97%E7%9F%B3%E5%A4%B4%E7%9A%84%E9%87%8D%E9%87%8FII.html)
 
-#### 思路
+## 思路
 
 来回选石头，然后消灭。
 
@@ -59,23 +56,23 @@ tags:
 
 和上一道题目相同：重量既是重量还是价值。
 
-#### 动规五部曲
+## 递归五部曲
 
-##### 1、dp数组及下标含义
+### 1、dp数组及下标含义
 
 **dp[j]表示容量（这里说容量更形象，其实就是重量）为j的背包，最多可以背最大重量为dp[j]**。
 
 “最多可以装的价值为 dp[j]” 等同于 “最多可以背的重量为dp[j]”
 
-##### 2.、递推公式
+### 2.、递推公式
 
 和上一道题相同
 
-```C++
+```cpp
 dp[j] = max(dp[j],dp[j - stones[i] + stones[i]])
 ```
 
-##### 3、dp数组初始化
+### 3、dp数组初始化
 
 背包的容量一般设置为所有的石头可能的最大重量和是多少。
 
@@ -85,15 +82,15 @@ dp[j] = max(dp[j],dp[j - stones[i] + stones[i]])
 
 因为石头重量不会是负数，而又有max函数，所以 dp[j] 初始化为0就行了。
 
-```C++
+```cpp
 vector(15001,0)
 ```
 
-##### 4、确定遍历顺序
+### 4、确定遍历顺序
 
 这里一维dp数组，先遍历物品，再遍历背包，并且背包容量是倒序遍历。
 
-```C++
+```cpp
 for(int i = 0;i < stones.size();i++){
     for(int j = target;j >= stones[i];j--){
         dp[j] = max(dp[j],dp[j-stones[i]] + stones[i]);
@@ -101,7 +98,7 @@ for(int i = 0;i < stones.size();i++){
 }
 ```
 
-##### 5、举例推导
+### 5、举例推导
 
 输入：[2,4,1,1]，此时target = (2 + 4 + 1 + 1)/2 = 4 ，dp数组状态图如下：
 
@@ -109,9 +106,9 @@ for(int i = 0;i < stones.size();i++){
 
 相撞之后剩下的最小石头重量就是 (sum - dp[target]) - dp[target]。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     int lastStoneWeightII(vector<int>& stones) {

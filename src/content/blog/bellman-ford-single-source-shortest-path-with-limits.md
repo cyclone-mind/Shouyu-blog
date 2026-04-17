@@ -15,16 +15,7 @@ tags:
   - Leetcode
 ---
 
-# Bellman-Ford之单源有限最短路
-
-**发布日期:** 2025/12/21
-**阅读时间:** 5 分钟
-**标签:** 算法笔记, 图论, 数据结构, 算法, 最短路算法, Bellman-Ford算法, 单源最短路, Leetcode
-
-## 正文
-# Bellman-Ford之单源有限最短路
-
-#### 题目描述
+## 题目描述
 
 某国为促进城市间经济交流，决定对货物运输提供补贴。共有 n 个编号为 1 到 n 的城市，通过道路网络连接，网络中的道路仅允许从某个城市单向通行到另一个城市，不能反向通行。
 
@@ -36,11 +27,11 @@ tags:
 
 请计算在最多经过 k 个城市的条件下，从城市 src 到城市 dst 的最低运输成本。
 
-题目链接：https://kamacoder.com/problempage.php?pid=1154
+[题目链接](https://kamacoder.com/problempage.php?pid=1154)
 
-文章讲解：https://programmercarl.com/kamacoder/0096.%E5%9F%8E%E5%B8%82%E9%97%B4%E8%B4%A7%E7%89%A9%E8%BF%90%E8%BE%93III.html
+[文章讲解](https://programmercarl.com/kamacoder/0096.%E5%9F%8E%E5%B8%82%E9%97%B4%E8%B4%A7%E7%89%A9%E8%BF%90%E8%BE%93III.html)
 
-#### 思考
+## 思考
 
 这道题是单源有限最短路径，即在bellman-ford算法基础上呢增加了最多经过k个城市。
 
@@ -50,7 +41,7 @@ tags:
 
 所以我们进行k+1轮次松弛呗：
 
-```C++
+```cpp
 版本一
 #include <cstdint>
 #include <iostream>
@@ -128,7 +119,7 @@ int main() {
 
 按照输入顺序
 
-```C++
+```cpp
 4 4
 1 2 -1
 2 3 1
@@ -139,7 +130,7 @@ int main() {
 
 按照以上输入顺序，minDist的变化是
 
-```C++
+```cpp
 minDist: max -1 -1 0 1
 minDist: max -2 -2 -1 0
 minDist: max -3 -3 -2 -1
@@ -158,7 +149,7 @@ minDist: max -4 -4 -3 -2
 
 将边的顺序改为
 
-```C++
+```cpp
 4 4
 3 1 -1
 3 4 1
@@ -169,7 +160,7 @@ minDist: max -4 -4 -3 -2
 
 得到minDist变化：
 
-```C++
+```cpp
 minDist: max 0 -1 max max 
 minDist: max 0 -1 0 max
 minDist: max -1 -2 0 1
@@ -188,7 +179,7 @@ minDist: max -1 -2 -1 1
 
 使用备份数组很好的做到这一点。在松弛完必要的边后，在下一轮获取上一轮计算结果
 
-```C++
+```cpp
 // 版本二
 #include <iostream>
 #include <vector>
@@ -231,7 +222,7 @@ int main() {
 }
 ```
 
-#### 核心思想
+## 核心思想
 
 那么做到这个保证（理论上来说，**对所有边松弛一次，相当于计算 起点到达 与起点一条边相连的节点 的最短距离**）为什么这么重要呢？？
 
@@ -286,7 +277,7 @@ graph LR
 ❌ 在第1轮就计算出到C的距离（违反了边数限制）
 ❌ 无法保证找到的是真正的最短路径
 
-#### 其他题目比较
+## 其他题目比较
 
 前面讲解过的94.城市间货物运输I和95.城市间货物运输II也bellman_ford经典算法，也没使用 minDist_copy，怎么就没问题呢？
 
@@ -300,7 +291,7 @@ graph LR
 
 * 最多要求k个节点
 
-#### SPFA
+### SPFA
 
 使用SPFA的时候因为节点都是一个个加入队列，分不清是第几轮。
 
@@ -308,7 +299,7 @@ graph LR
 
 下次松弛弹出队列时，只弹出上轮松弛入队列的节点就行。
 
-```C++
+```cpp
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -368,7 +359,7 @@ int main() {
 }
 ```
 
-#### 能否用dijkstra
+### 能否用dijkstra
 
 就算不存在负权回路，只限制节点个数，能用dijstra吗？
 

@@ -10,14 +10,6 @@ tags:
   - 哈希
 ---
 
-# 四数之和
-
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 哈希
-
-## 正文
-#### 问题描述
 
 给你一个由`n`个整数组成的数组`nums`，和一个目标值`target`。请你找出并返回满足下述全部条件且**不重复**的四元组`[nums[a], nums[b], nums[c], nums[d]]`（若两个四元组元素一一对应，则认为两个四元组重复）：
 
@@ -29,11 +21,11 @@ tags:
 
 你可以按**任意顺序**返回答案 。
 
-题目链接：https://leetcode.cn/problems/4sum/
+[题目链接](https://leetcode.cn/problems/4sum/)
 
-文章讲解：https://programmercarl.com/0018.%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C.html
+[文章讲解](https://programmercarl.com/0018.%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C.html)
 
-#### 思路
+## 思路
 
 相比于三数之和，这道题将三元组升为四元组，`target`由 0 变为自定义。整体思路不变，不过有些细节需要注意。
 
@@ -43,9 +35,9 @@ tags:
 
 同理 剪枝`i`时需要变为`nums[k] + nums[i] > target && nums[k] + nums[i] >= 0`。其余内部不变
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     vector<vector<int>> fourSum(vector<int>& nums, int target) {

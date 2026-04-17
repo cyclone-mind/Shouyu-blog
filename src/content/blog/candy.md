@@ -12,16 +12,7 @@ tags:
   - Leetcode
 ---
 
-# 分发糖果
-
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 贪心, 算法, 贪心算法, 数组, Leetcode
-
-## 正文
-# 分发糖果
-
-#### 题目描述
+## 题目描述
 
 老师想给孩子们分发糖果，有 N 个孩子站成了一条直线，老师会根据每个孩子的表现，预先给他们评分。
 
@@ -33,11 +24,11 @@ tags:
 
 那么这样下来，老师至少需要准备多少颗糖果呢？
 
-题目链接：https://leetcode.cn/problems/candy/
+[题目链接](https://leetcode.cn/problems/candy/)
 
-文章讲解：https://programmercarl.com/0135.%E5%88%86%E5%8F%91%E7%B3%96%E6%9E%9C.html
+[文章讲解](https://programmercarl.com/0135.%E5%88%86%E5%8F%91%E7%B3%96%E6%9E%9C.html)
 
-#### 思考
+## 思考
 
 每个孩子的糖果数取决于左右两个孩子，如果我们遍历每个孩子，然后比较左右评分分配糖果，那么我们会顾此失彼，为什么？
 
@@ -55,20 +46,20 @@ tags:
 
 1. 处理索引1（评分2）：
 
-比左边高：candyVec[1] = candyVec[0] + 1 = 2
+比左边高：`candyVec[1] = candyVec[0] + 1 = 2`
 比右边低：无需处理
-结果：candyVec[1] = 2
+结果：`candyVec[1] = 2`
 
 1. 处理索引2（评分3）：
 
-比左边高：candyVec[2] = candyVec[1] + 1 = 3
-比右边高：candyVec[2] = candyVec[3] + 1 = ? （candyVec[3]还没正确计算）
-这里出现问题：我们不知道candyVec[3]应该是多少
+比左边高：`candyVec[2] = candyVec[1] + 1 = 3`
+比右边高：`candyVec[2] = candyVec[3] + 1 = ? `（candyVec[3]还没正确计算）
+这里出现问题：我们不知道`candyVec[3]`应该是多少
 
 1. 处理索引3（评分2）：
 
-比左边高：candyVec[3] = candyVec[2] + 1 = ? （candyVec[2]在上面被设为3）
-比右边高：candyVec[3] = candyVec[4] + 1 = 2
+比左边高：`candyVec[3] = candyVec[2] + 1 = ? `（`candyVec[2]`在上面被设为3）
+比右边高：`candyVec[3] = candyVec[4] + 1 = 2`
 应该取哪个值？这里就顾此失彼了
 
 我们应该进行两次遍历
@@ -81,9 +72,9 @@ tags:
 
 为什么不能从前向后遍历？
 
-因为 rating[5]与rating[4]的比较 要利用上 rating[5]与rating[6]的比较结果，所以 要从后向前遍历。
+因为 `rating[5]`与`rating[4]`的比较 要利用上 `rating[5]`与`rating[6]`的比较结果，所以 要从后向前遍历。
 
-如果从前向后遍历，rating[5]与rating[4]的比较 就不能用上 rating[5]与rating[6]的比较结果了 。
+如果从前向后遍历，`rating[5]`与`rating[4]`的比较 就不能用上 `rating[5]`与`rating[6]`的比较结果了 。
 
 整体而言就是
 
@@ -93,9 +84,9 @@ tags:
 
 * 一次是从右到左遍历，只比较左边孩子评分比右边大的情况。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     int candy(vector<int>& ratings) {

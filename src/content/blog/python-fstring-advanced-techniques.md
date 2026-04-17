@@ -1,5 +1,5 @@
 ---
-title: 'Python f-string 进阶玩法：让你的格式化输出更秀！'
+title: 'Python f-string 进阶玩法'
 description: 'python 的字符串格式化'
 pubDate: '2025-11-21'
 authors:
@@ -12,18 +12,13 @@ tags:
   - 编程技巧
 ---
 
-# Python f-string 进阶玩法：让你的格式化输出更秀！
-
-**发布日期:** 2025/11/21
-**阅读时间:** 3 分钟
-**浏览次数:** 26
-**标签:** Web开发, Python, f-string, 编程技巧
-
 ## 摘要
+
 python 的字符串格式化
 
 ## 正文
-嘿，今天聊聊 f-string。自从 Python 3.6 之后，它基本上就成了字符串格式化的首选了，确实方便。如果你还在用老式的`%`或者`.format()`，那不妨看看 f-string 能怎么让你的代码更简洁。
+
+今天聊聊 f-string。自从 Python 3.6 之后，它基本上就成了字符串格式化的首选了，确实方便。如果你还在用老式的`%`或者`.format()`，那不妨看看 f-string 能怎么让你的代码更简洁。
 
 走着，一起看看 f-string 除了基础用法，还能玩出哪些花样，让输出不再干巴巴。🚀
 

@@ -13,16 +13,7 @@ tags:
   - Leetcode
 ---
 
-# 字符串接龙
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 图论, 数据结构, 算法, 广度优先搜索, BFS, 字符串, Leetcode
-
-## 正文
-# 字符串接龙
-
-#### 题目描述
+## 题目描述
 
 字典 strList 中从字符串 beginStr 和 endStr 的转换序列是一个按下述规格形成的序列：
 
@@ -36,11 +27,11 @@ tags:
 
 给你两个字符串 beginStr 和 endStr 和一个字典 strList，找到从 beginStr 到 endStr 的最短转换序列中的字符串数目。如果不存在这样的转换序列，返回 0。
 
-题目链接：https://kamacoder.com/problempage.php?pid=1183
+[题目链接](https://kamacoder.com/problempage.php?pid=1183)
 
-文章讲解：https://programmercarl.com/kamacoder/0110.%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8E%A5%E9%BE%99.html
+[文章讲解](https://programmercarl.com/kamacoder/0110.%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8E%A5%E9%BE%99.html)
 
-#### 思路
+## 思路
 
 借助卡哥画的图理解。
 
@@ -64,9 +55,9 @@ tags:
 
 为了防止广搜重复搜索（陷入死循环），需要使用容器标记当前节点，另外最终需要求最短路径长度，因此还需要记录以下从起始节点到当前节点所走过的步数，因此使用`unordered_map<string, int> visitMap`
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 #include <iostream>
 #include <queue>
 #include <string>

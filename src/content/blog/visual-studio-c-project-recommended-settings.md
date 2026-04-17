@@ -10,17 +10,6 @@ tags:
   - Visual Studio
 ---
 
-# Visual Studio C++ 项目推荐设置
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**浏览次数:** 1
-**标签:** C++, Visual Studio, Cherno
-
-## 正文
-> 作者：shouyu
-视频参考：Cherno C++ 系列
-
 ## 1. 创建新项目和解决方案
 
 * 在 Visual Studio 中，依次点击“文件”→“新建”→“项目”，创建全新项目和解决方案。
@@ -78,6 +67,7 @@ tags:
 ## 13. 设置输出目录（Output Directory）
 
 * 在“常规”设置下找到“输出目录”，建议设置为：
+```plaintext
 $(SolutionDir)bin\$(Platform)\$(Configuration)\
 
 
@@ -93,11 +83,14 @@ $(Configuration)：构建配置（如 Debug、Release）
 * $(Platform)：目标平台（如 Win32、x64）
 
 * $(Configuration)：构建配置（如 Debug、Release）
+```
 
 ## 14. 设置中间目录（Intermediate Directory）
 
 * 在“常规”设置下找到“中间目录”，建议设置为：
+```
 $(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\
+```
 
 
 这样可将中间文件与最终二进制文件分开，便于管理。

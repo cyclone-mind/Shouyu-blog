@@ -14,16 +14,9 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 数组：704. 二分查找
+[题目链接](https://leetcode.cn/problems/binary-search/)
 
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 数组, 代码随想录, 数据结构与算法, Leetcode
-
-## 正文
-题目链接：https://leetcode.cn/problems/binary-search/
-
-文章讲解：https://programmercarl.com/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.html
+[文章讲解](https://programmercarl.com/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.html)
 
 题目：给定一个`n`个元素有序的（升序）整型数组`nums`和一个目标值`target`，写一个函数搜索`nums`中的`target`，如果目标值存在返回下标，否则返回`-1`。
 
@@ -43,7 +36,7 @@ tags:
 解释: 2 不存在 nums 中因此返回 -1
 ```
 
-#### 思路
+## 思路
 
 通常来说查找数组中的某个元素那就是循环一个一个找呗。但这最坏循环 N 次。
 
@@ -63,7 +56,7 @@ tags:
 
 二分查找的关键在于你要确定一个什么样的区间？我们常用的是左闭右开和左闭右闭。
 
-```C++
+```cpp
 // 左闭右闭
 class Solution {
 public:
@@ -111,7 +104,7 @@ class Solution(object):
 
 空间复杂度 O(1)，只用常数个变量，无递归/新数组。
 
-#### 启发
+## 启发
 
 所以当我们在有序数组中，想要快速查找某个元素时，二分查找能大大提高效率。
 
@@ -119,6 +112,6 @@ class Solution(object):
 
 1. 两个 int 相加时的防溢出
 
-#### 困难
+## 困难
 
 边界条件的处理

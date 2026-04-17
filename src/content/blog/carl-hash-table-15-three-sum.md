@@ -13,21 +13,14 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 哈希表 15 三数之和
+[题目链接](https://leetcode.cn/problems/3sum/description/)
 
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 哈希, 代码随想录, 数据结构与算法, Leetcode, 哈希表
+[文章讲解](https://programmercarl.com/0015.%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C.html)
 
-## 正文
-题目链接：https://leetcode.cn/problems/3sum/description/
-
-文章讲解：https://programmercarl.com/0015.%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C.html
-
-### 题目描述
+## 题目描述
 
 * 给你一个整数数组 nums ，判断是否存在三元组 [nums[i], nums[j], nums[k]] 满足 i != j、i != k 且 j != k ，同时还满足 nums[i] + nums[j] + nums[k] == 0 。请你返回所有和为 0 且不重复的三元组。
-**注意：**答案中不可以包含重复的三元组。
+**注意**答案中不可以包含重复的三元组。
 示例 1：
 输入：nums = [-1,0,1,2,-1,-4]
 输出：[[-1,-1,2],[-1,0,1]]
@@ -57,7 +50,7 @@ nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
 
 * -105 <= nums[i] <= 105
 
-### 思路
+## 思路
 
 属于经典的双指针+排序+去重问题。
 
@@ -92,7 +85,7 @@ left 指向 i+1，right 指向数组末尾。
 i > 0 时，若 nums[i] == nums[i-1]，跳过，避免三元组重复。
 找到三元组后，left/right 也要跳过重复值。
 
-```C++
+```cpp
 vector<vector<int>> threeSum(vector<int> &nums)
 {
     vector<vector<int>> result;
@@ -155,7 +148,7 @@ left < right 的条件，left/right 的移动和跳过重复的顺序。
 
 如果 nums[i] > 0，可以直接 break，提升效率。
 
-### 易错点
+## 易错点
 
 1. 去重不彻底
 

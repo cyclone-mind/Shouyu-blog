@@ -13,32 +13,25 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 二叉树：104. 最大深度
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法, Leetcode
-
-## 正文
-#### 题目描述
+## 题目描述
 
 给定一个二叉树`root`，返回其最大深度。
 
 二叉树的**最大深度**是指从根节点到最远叶子节点的最长路径上的节点数。
 
-题目链接：https://leetcode.cn/problems/maximum-depth-of-binary-tree
+[题目链接](https://leetcode.cn/problems/maximum-depth-of-binary-tree)
 
-文章讲解：https://programmercarl.com/0104.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6.html
+[文章讲解](https://programmercarl.com/0104.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6.html)
 
-#### 思路
+## 思路
 
 二叉树的最大深度实际上是整个树的高度，而要整个树的高度是左子树高度和右子树高度中的最大值 + 1。
 
 实际上任意一棵树，其树高度求取决于左右两个子树。因此是父节点取决于子节点，后序遍历即可求高度。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
@@ -71,9 +64,9 @@ public:
 
 * if (node->right) { depth++; getDepth(node->right, depth); depth--; }: 同理，处理右孩子。
 
-#### 代码实现 求深度
+## 代码实现 求深度
 
-```C++
+```cpp
 class Solution {
 public:
     int result;

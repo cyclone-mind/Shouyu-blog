@@ -10,28 +10,17 @@ tags:
   - 字符串
 ---
 
-# 翻转
-
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**浏览次数:** 1
-**标签:** 算法笔记, 字符串
-
-## 摘要
-反转字符串中单词的顺序
-
-## 正文
-#### 题目描述
+## 题目描述
 
 给你一个字符串`s`，请你反转字符串中**单词**的顺序。**单词**是由非空格字符组成的字符串。`s`中使用至少一个空格将字符串中的**单词**分隔开。
 返回**单词**顺序颠倒且**单词**之间用单个空格连接的结果字符串。
-**注意：**输入字符串`s`中可能会存在前导空格、尾随空格或者单词间的多个空格。返回的结果字符串中，单词间应当仅用单个空格分隔，且不包含任何额外的空格。
+**注意**输入字符串`s`中可能会存在前导空格、尾随空格或者单词间的多个空格。返回的结果字符串中，单词间应当仅用单个空格分隔，且不包含任何额外的空格。
 
-题目链接：https://leetcode.cn/problems/reverse-words-in-a-string/description/
+[题目链接](https://leetcode.cn/problems/reverse-words-in-a-string/description/)
 
-文章链接：https://programmercarl.com/0151.%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D.html
+[文章链接]https://programmercarl.com/0151.%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D.html
 
-#### 思路
+## 思路
 
 思路是颠倒两次，首先把整个字符串颠倒，再挨个把单个单词颠倒。
 
@@ -39,7 +28,7 @@ tags:
 
 法一：双指针法，快指针找到一个单词（遍历到第一个不是空格的字符，我们就认为找到了一个单词的开头），然后在它前面（如果不是第一个单词）添加一个空格（填充慢指针实现），然后复制整个单词（快指针填充慢指针实现）。所有多余的空格都被 fast 指针在寻找下一个单词时自然跳过。
 
-```C++
+```cpp
 void removeExtraSpaces(string &s)
 {
     int slow = 0; 
@@ -60,7 +49,7 @@ void removeExtraSpaces(string &s)
             {
                 s[slow++] = s[fast++]; // 复制字符，同时移动快慢指针
             }
-            // 注意：当内层 while 循环结束时，fast 会停在当前单词后面的第一个空格 (或字符串末尾)
+            // 注意当内层 while 循环结束时，fast 会停在当前单词后面的第一个空格 (或字符串末尾)
             // 外层 for 循环的 fast++ 会进一步将 fast 移动到下一个位置
         }
         // 如果 s[fast] 是空格，那么外层 for 循环会直接跳过这个 if 块，
@@ -75,7 +64,7 @@ void removeExtraSpaces(string &s)
 
 法二：双指针法，快指针遇到非空字符，则替换慢指针，如果遇到空字符但是此时慢指针的前一位不是空字符，则填充慢指针（添加空格），但是需要注意如果字符串最后还有一个空格，slow指针会指向空格的下一位，此时resize之前需要使slow-1。
 
-```C++
+```cpp
 void removeExtraSpaces(string& s) {
     int slow = 0; // 慢指针，用于构建新字符串
     for (int fast = 0; fast < s.size(); fast++) {
@@ -100,9 +89,9 @@ void removeExtraSpaces(string& s) {
 
 最后就是反转单个单词了，我们需要找到每个单词的起始位置，然后遍历到找到结束位置，反转单词即可，需要注意的是找最后一个单词的结束位置实际是s.size() ，因此定义结束位置的循环条件要为`right <= s.size()`
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 #include <string>
 #include <algorithm>
 #include <iostream>

@@ -13,18 +13,11 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 哈希表 383 赎金信
+[题目链接](https://leetcode.cn/problems/ransom-note/description/)
 
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 哈希, 代码随想录, 数据结构与算法, Leetcode, 哈希表
+[文章讲解](https://programmercarl.com/0383.%E8%B5%8E%E9%87%91%E4%BF%A1.html)
 
-## 正文
-题目链接：https://leetcode.cn/problems/ransom-note/description/
-
-文章讲解：https://programmercarl.com/0383.%E8%B5%8E%E9%87%91%E4%BF%A1.html
-
-### 题目描述
+## 题目描述
 
 给你两个字符串：`ransomNote`和`magazine`，判断`ransomNote`能不能由`magazine`里面的字符构成。
 
@@ -59,7 +52,7 @@ tags:
 
 * ransomNote 和 magazine 由小写英文字母组成
 
-### 思路
+## 思路
 
 这道题比较简单，将 magazine 转为哈希表，然后遍历 ransomNote，在哈希表对应位置上减 1，如果哈希表有数小于 0，就说明 ransomNote 中的字符在 magazine 已经用光了，出现了存在于 ransomNote 未存在于 magazine 上的情况。
 
@@ -75,7 +68,7 @@ tags:
 
 ​ 全小写字母，我们就用 26 长度的数组作为哈希表。
 
-```C++
+```cpp
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {

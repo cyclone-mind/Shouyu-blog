@@ -12,25 +12,15 @@ tags:
   - 数据结构与算法
 ---
 
-# 代码随想录 二叉树：左叶子之和
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法
-
-## 摘要
-左叶子之和
-
-## 正文
-#### 题目描述
+## 题目描述
 
 给定二叉树的根节点`root`，返回所有左叶子之和。
 
-题目链接：https://leetcode.cn/problems/sum-of-left-leaves/
+[题目链接](https://leetcode.cn/problems/sum-of-left-leaves/)
 
-文章讲解：https://programmercarl.com/0404.%E5%B7%A6%E5%8F%B6%E5%AD%90%E4%B9%8B%E5%92%8C.html
+[文章讲解](https://programmercarl.com/0404.%E5%B7%A6%E5%8F%B6%E5%AD%90%E4%B9%8B%E5%92%8C.html)
 
-#### 思考
+## 思考
 
 一棵树的左叶子之和等于左子树左叶子之和加右子树左叶子之和。因此使用后序遍历。那叶子节点没有子树，它的左叶子之和就为0。所以遍历到叶子节点就终止，返回0。
 
@@ -58,9 +48,9 @@ tags:
 
 所以我们需要拿到左子树左叶子之和后，需要判断一下这种情况，即该节点左子节点不为空，且左子节点没有子节点，则它的左子节点就是左叶子。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     int sumOfLeftLeaves(TreeNode* root) {

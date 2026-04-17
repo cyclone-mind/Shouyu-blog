@@ -20,6 +20,7 @@ export default defineConfig({
 				light: 'github-light',
 				dark: 'github-dark',
 			},
+			defaultColor: false,
 		},
 		remarkPlugins: [remarkMath],
 		rehypePlugins: [rehypeKatex]

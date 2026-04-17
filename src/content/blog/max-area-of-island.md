@@ -15,28 +15,25 @@ tags:
   - Leetcode
 ---
 
-## 正文
-# 岛屿的最大面积
-
-#### 题目描述
+## 题目描述
 
 给定一个由 1（陆地）和 0（水）组成的矩阵，计算岛屿的最大面积。岛屿面积的计算方式为组成岛屿的陆地的总数。岛屿由水平方向或垂直方向上相邻的陆地连接而成，并且四周都是水域。你可以假设矩阵外均被水包围。
 
-题目链接：https://kamacoder.com/problempage.php?pid=1172
+[题目链接](https://kamacoder.com/problempage.php?pid=1172)
 
-文章链接：https://programmercarl.com/kamacoder/0100.%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%9C%80%E5%A4%A7%E9%9D%A2%E7%A7%AF.html
+[文章链接](https://programmercarl.com/kamacoder/0100.%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%9C%80%E5%A4%A7%E9%9D%A2%E7%A7%AF.html)
 
-#### 思路
+## 思路
 
 岛屿最大面积可以用深搜也可以广搜，相比较于**岛屿数量问题**只需要更换少量代码。
 
 需要遍历网格时每踏上一个新岛屿，就 设置一个 count 然后再遍历该岛屿，遍历的时候count++计算岛屿面积，遍历完之后比较一下最大面积和count即可。
 
-#### 代码实现
+## 代码实现
 
-##### 广搜版
+### 广搜版
 
-```C++
+```cpp
 #include <iostream>
 #include <vector>
 #include <queue>

@@ -13,14 +13,7 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 二叉树：111. 最小深度
-
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法, Leetcode
-
-## 正文
-#### 题目描述
+## 题目描述
 
 给定一个二叉树，找出其最小深度。
 
@@ -28,11 +21,11 @@ tags:
 
 **说明：叶子节点是指没有子节点的节点**。
 
-题目链接：https://leetcode.cn/problems/minimum-depth-of-binary-tree
+[题目链接](https://leetcode.cn/problems/minimum-depth-of-binary-tree)
 
-文章讲解：https://programmercarl.com/0111.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E6%B7%B1%E5%BA%A6.html
+[文章讲解](https://programmercarl.com/0111.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E6%B7%B1%E5%BA%A6.html)
 
-#### 思路
+## 思路
 
 深度和高度对应，那么自然，有最小深度就一定有最小高度。
 
@@ -58,7 +51,7 @@ tags:
 
 一些同学可能会写如下代码：
 
-```C++
+```cpp
 int leftDepth = getDepth(node->left);
 int rightDepth = getDepth(node->right);
 int result = 1 + min(leftDepth, rightDepth);
@@ -67,11 +60,11 @@ return result;
 
 这就是没有考虑单边子树的情况。单边子树的话，最小深度应该继承单边子树那边的最小深度
 
-#### 代码实现
+## 代码实现
 
-##### 详细注释
+### 详细注释
 
-```C++
+```cpp
 int getMinDepthFromNode(
     TreeNode
         *node) { // 获取从当前节点开始的最小深度（到最近叶子节点的节点数量）
@@ -107,9 +100,9 @@ int minDepth(TreeNode *root) {
 }
 ```
 
-##### 代码简化
+### 代码简化
 
-```C++
+```cpp
 class Solution {
 public:
     int minDepth(TreeNode* root) {

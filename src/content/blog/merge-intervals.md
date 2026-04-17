@@ -14,24 +14,22 @@ tags:
   - Leetcode
 ---
 
-## 正文
-# 合并区间
 
-#### 题目描述
+## 题目描述
 
 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi] 。请你合并所有重叠的区间，并返回一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间。
 
-题目链接：https://leetcode.cn/problems/merge-intervals/
+[题目链接](https://leetcode.cn/problems/merge-intervals/)
 
-文章讲解：https://programmercarl.com/0056.%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4.html
+[文章讲解](https://programmercarl.com/0056.%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4.html)
 
-#### 思考
+## 思考
 
 这道题直观想法，对于这个例子：
 
 **示例 1：**
 
-```C++
+```cpp
 输入：s = "ababcbacadefegdehijhklij"
 输出：[9,7,8]
 解释：
@@ -52,9 +50,9 @@ tags:
 
 如图：
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     vector<int> partitionLabels(string s) {

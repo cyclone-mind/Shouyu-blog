@@ -21,7 +21,7 @@ tags:
 ## 正文
 # 两个字符串的删除操作
 
-#### 题目描述
+## 题目描述
 
 给定两个单词 word1 和 word2，找到使得 word1 和 word2 相同所需的最小步数，每步可以删除任意一个字符串中的一个字符。
 
@@ -33,21 +33,21 @@ tags:
 
 * 解释: 第一步将 "sea" 变为 "ea" ，第二步将 "eat" 变为 "ea"
 
-题目链接：https://leetcode.cn/problems/delete-operation-for-two-strings/
+[题目链接](https://leetcode.cn/problems/delete-operation-for-two-strings/)
 
-文章讲解：https://programmercarl.com/0583.%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C.html
+[文章讲解](https://programmercarl.com/0583.%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C.html)
 
-#### 思路
+## 思路
 
 与**不同的子序列**相比，这次两个字符串都可以删除了。那道题求得是出现次数，实际上总长度减去出现次数也就是本题中的操作数了。所以两者实际考的东西是一样的。
 
-#### 动规五部曲
+## 递归五部曲
 
-##### 1、dp 数组及下标含义
+### 1、dp 数组及下标含义
 
 `dp[i][j]`：以i-1为结尾的字符串word1，和以j-1位结尾的字符串word2，想要达到相等，所需要删除元素的最少次数。
 
-##### 2、递推公式
+### 2、递推公式
 
 情况1：当word1[i - 1] 与 word2[j - 1]相同的时候，`dp[i][j] = dp[i - 1][j - 1];`
 
@@ -61,7 +61,7 @@ tags:
 
 * 以上三种情况需要取最小值，因为要求最小操作数嘛
 
-##### 3、初始化
+### 3、初始化
 
 需要初始化`dp[i][0] dp[0][j]`.
 
@@ -69,17 +69,17 @@ tags:
 
 同理`dp[0][j]`最少是 j 次
 
-##### 4、确定遍历顺序
+### 4、确定遍历顺序
 
 左上方、正上方、正左方推。因此从上到下从左到右
 
-##### 5、举例推导
+### 5、举例推导
 
 word1:"sea"，word2:"eat"为例，推导dp数组状态图如下：
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 int minDistance(string word1, string word2) {
     int m = word1.size(), n = word2.size();
     vector<vector<int>> dp(m+1,vector<int>(n+1,0));

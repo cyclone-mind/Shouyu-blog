@@ -14,15 +14,9 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 数组：54. 区间和
+[题目链接](https://kamacoder.com/problempage.php?pid=1070)
 
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 数组, 代码随想录, 数据结构与算法, Leetcode
-
-## 正文
-* 题目链接 https://kamacoder.com/problempage.php?pid=1070
-文章链接：https://programmercarl.com/kamacoder/0058.%E5%8C%BA%E9%97%B4%E5%92%8C.html
+[文章链接](https://programmercarl.com/kamacoder/0058.%E5%8C%BA%E9%97%B4%E5%92%8C.html)
 
 题目描述
 
@@ -60,7 +54,7 @@ tags:
 
 0 < n <= 100000
 
-#### 思路
+## 思路
 
 **在一个数组内随意划定一个区间，求和**。这看起来很简单一个 for 循环就行，但是如果要求 n 次呢？岂不是又要一个 for 循环？就 o(n^2)了啊。
 
@@ -68,9 +62,9 @@ tags:
 
 前缀和的思想是重复利用计算过的子数组之和，从而降低区间查询需要累加计算的次数。
 
-有一个 vec 数组，先求出来前缀和数组 p。
+有一个 `vec` 数组，先求出来前缀和数组 p。
 
-例如我们想统计，在 vec 数组上 下标 2 到下标 5 之间的累加和，那是不是就用 p[5] - p[1] 就可以了。
+例如我们想统计，在 `vec` 数组上 下标 2 到下标 5 之间的累加和，那是不是就用 `p[5] - p[1]` 就可以了。
 
 为什么呢？
 
@@ -82,7 +76,7 @@ p[5] - p[1] = vec[2] + vec[3] + vec[4] + vec[5];
 
 求 a 到 b 的区间和，就`p[b]-p[a-1]`就行。
 
-```C++
+```cpp
 #include <iostream>
 #include <vector>
 using namespace std;

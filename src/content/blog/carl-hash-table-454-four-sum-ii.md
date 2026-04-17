@@ -13,18 +13,11 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 哈希表 454 四数相加 II
+[题目链接](https://leetcode.cn/problems/4sum-ii/description/)
 
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 哈希, 代码随想录, 数据结构与算法, Leetcode, 哈希表
+[文章讲解](https://programmercarl.com/0454.%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II.html)
 
-## 正文
-题目链接：https://leetcode.cn/problems/4sum-ii/description/
-
-文章讲解：https://programmercarl.com/0454.%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II.html
-
-### 题目描述
+## 题目描述
 
 给你四个整数数组`nums1`、`nums2`、`nums3`和`nums4`，数组长度都是`n`，请你计算有多少个元组`(i, j, k, l)`能满足：
 
@@ -32,7 +25,7 @@ tags:
 
 * nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0
 
-### 思路
+## 思路
 
 四个数组中各找一个数，相加等于 0。直观的想法是 4 个嵌套的 for 循环，然后判断出来和是否等于 n。
 
@@ -48,7 +41,7 @@ tags:
 
 因为题目给定`-228 <= nums1[i], nums2[i], nums3[i], nums4[i] <= 228`所以使用 map 作为哈希表比较合适。
 
-```C++
+```cpp
 #include <unordered_map>
 #include <vector>
 #include <iostream>

@@ -13,18 +13,11 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 哈希表 1 两数之和
+[题目链接](https://leetcode.cn/problems/two-sum/description/)
 
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 哈希, 代码随想录, 数据结构与算法, Leetcode, 哈希表
+[文章讲解](https://programmercarl.com/0001.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.html)
 
-## 正文
-题目链接：https://leetcode.cn/problems/two-sum/description/
-
-文章讲解：https://programmercarl.com/0001.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.html
-
-### 题目描述
+## 题目描述
 
 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
 
@@ -38,7 +31,7 @@ tags:
 
 所以返回 [0, 1]
 
-### 思路
+## 思路
 
 最初的、最直观的想法 (暴力枚举) 💥
 

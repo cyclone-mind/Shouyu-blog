@@ -11,12 +11,6 @@ tags:
   - FastAPI
 ---
 
-# FastAPI
-
-**发布日期:** 2025/12/21
-**阅读时间:** 11 分钟
-**标签:** Web 开发, Python
-
 ## 摘要
 FastAPI 最佳实践
 

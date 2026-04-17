@@ -15,23 +15,17 @@ tags:
   - Leetcode
 ---
 
-## 摘要
-所有孤岛的总面积
-
-## 正文
-# 孤岛总面积
-
-#### 题目描述
+## 题目描述
 
 给定一个由 1（陆地）和 0（水）组成的矩阵，岛屿指的是由水平或垂直方向上相邻的陆地单元格组成的区域，且完全被水域单元格包围。孤岛是那些位于矩阵内部、所有单元格都不接触边缘的岛屿。
 
 现在你需要计算所有**孤岛的总面积**，岛屿面积的计算方式为组成岛屿的陆地的总数。
 
-题目链接：https://kamacoder.com/problempage.php?pid=1173
+[题目链接](https://kamacoder.com/problempage.php?pid=1173)
 
-文章链接：https://programmercarl.com/kamacoder/0101.%E5%AD%A4%E5%B2%9B%E7%9A%84%E6%80%BB%E9%9D%A2%E7%A7%AF.html
+[文章链接](https://programmercarl.com/kamacoder/0101.%E5%AD%A4%E5%B2%9B%E7%9A%84%E6%80%BB%E9%9D%A2%E7%A7%AF.html)
 
-#### 思考
+## 思考
 
 不找到孤岛，而是把所有非孤岛（靠边的岛屿）找到，标记为海洋。类似于“沉没”，之后再正常找到所有的陆地总面积就是所有的孤岛总面积了
 
@@ -39,7 +33,7 @@ tags:
 
 至于在沉没的时候也不需要 visited ，因为在扩展整个岛屿时，沉没这个动作就已经替代了 visited 的作用。
 
-```C++
+```cpp
 if (gird[next_x][next_y] == 0) {
     continue;
 }
@@ -48,11 +42,11 @@ dfs(gird, next_x, next_y);
 
 扩展遍历至海洋的时候跳过，而原来是 visited 为 true 的时候跳过
 
-#### 代码实现
+## 代码实现
 
 ##### 深搜版
 
-```C++
+```cpp
 #include <iostream>
 #include <vector>
 using namespace std;

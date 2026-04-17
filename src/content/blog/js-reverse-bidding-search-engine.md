@@ -10,9 +10,11 @@ tags:
 ---
 
 ## 摘要
+
 js-reverse-js-reverse-bidding-search-engine
 
 ## 正文
+
 JS 逆向（JavaScript Reverse Engineering）指通过分析网页中 JavaScript 代码的加密逻辑，还原数据请求的加密参数生成过程。它是爬虫开发中绕过反爬机制的核心技术，常用于处理以下场景：
 
 * 网页通过 eval、webpack 混淆加密参数（如 _signature、token）

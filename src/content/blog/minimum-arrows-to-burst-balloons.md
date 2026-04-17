@@ -14,10 +14,7 @@ tags:
   - Leetcode
 ---
 
-## 正文
-# 用最少数量的箭引爆气球
-
-#### 题目描述
+## 题目描述
 
 有一些球形气球贴在一堵用 XY 平面表示的墙上。墙上的气球记录在整数数组 points ，其中points[i] = [xstart, xend] 表示水平直径在 xstart 和 xend之间的气球。你不知道气球的确切 y 坐标。
 
@@ -25,11 +22,11 @@ tags:
 
 给你一个数组 points ，返回引爆所有气球所必须射出的最小弓箭数。
 
-题目链接：https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/
+[题目链接](https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/)
 
-文章讲解：https://programmercarl.com/0452.%E7%94%A8%E6%9C%80%E5%B0%91%E6%95%B0%E9%87%8F%E7%9A%84%E7%AE%AD%E5%BC%95%E7%88%86%E6%B0%94%E7%90%83.html
+[文章讲解](https://programmercarl.com/0452.%E7%94%A8%E6%9C%80%E5%B0%91%E6%95%B0%E9%87%8F%E7%9A%84%E7%AE%AD%E5%BC%95%E7%88%86%E6%B0%94%E7%90%83.html)
 
-#### 思考
+## 思考
 
 只射重叠最多的气球，用的弓箭一定最少。
 
@@ -79,11 +76,11 @@ graph TD
     H -->|是| I[返回箭数]
 ```
 
-#### 代码实现
+## 代码实现
 
 使用气球右边界保存重叠区间右边界
 
-```C++
+```cpp
 int findMinArrowShots(vector<vector<int>>& points) {
     sort(points.begin(),points.end(),[](vector<int>& a,vector<int>& b){return a[0] < b[0];});
     int result = 1;
@@ -100,7 +97,7 @@ int findMinArrowShots(vector<vector<int>>& points) {
 
 单独变量来保存重叠区间右边界
 
-```C++
+```cpp
 #include <algorithm>
 #include <vector>
 using namespace std;

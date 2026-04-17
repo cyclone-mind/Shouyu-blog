@@ -14,24 +14,15 @@ tags:
   - Leetcode
 ---
 
-# 拓扑排序
-
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 图论, 数据结构, 算法, 拓扑排序, 有向无环图, DAG, Leetcode
-
-## 正文
-# 拓扑排序
-
-#### 题目描述
+## 题目描述
 
 某个大型软件项目的构建系统拥有 N 个文件，文件编号从 0 到 N - 1，在这些文件中，某些文件依赖于其他文件的内容，这意味着如果文件 A 依赖于文件 B，则必须在处理文件 A 之前处理文件 B （0 <= A, B <= N - 1）。请编写一个算法，用于确定文件处理的顺序。
 
-题目链接：https://kamacoder.com/problempage.php?pid=1191
+[题目链接](https://kamacoder.com/problempage.php?pid=1191)
 
-文章讲解：https://programmercarl.com/kamacoder/0117.%E8%BD%AF%E4%BB%B6%E6%9E%84%E5%BB%BA.html
+[文章讲解](https://programmercarl.com/kamacoder/0117.%E8%BD%AF%E4%BB%B6%E6%9E%84%E5%BB%BA.html)
 
-#### 思考
+## 思考
 
 拓扑排序是经典的图论问题，用于解决复杂依赖关系中的线性顺序输出。
 
@@ -69,7 +60,7 @@ tags:
 
 另外为了在移除节点的时候把该节点出边去掉，要把这出边指向的节点记录下来，因此使用`unordered_map<int, vector<int>> umap; // 记录文件依赖关系`，同样可以在初始化时做这一步。
 
-```C++
+```cpp
 cin >> n >> m;
 vector<int> inDegree(n, 0); // 记录每个文件的入度
 vector<int> result; // 记录结果
@@ -85,7 +76,7 @@ while (m--) {
 
 找到一个入度为零的点后我们需要广搜，去找与它相邻的移除它之后的入度为 0  的点，因此，我们使用队列存放入度为 0 的 点。
 
-```C++
+```cpp
 queue<int> que;
 for (int i = 0; i < n; i++) {
     // 入度为0的节点，可以作为开头，先加入队列
@@ -95,7 +86,7 @@ for (int i = 0; i < n; i++) {
 
 初始化之后，遍历队列里入度为 0 的节点（当然也只有入度为 0 的节点），将其放入结果集中，意味着我们输出了它，处理了它。
 
-```C++
+```cpp
 while (que.size()) {
     int  cur = que.front(); // 当前选中的节点
     que.pop();
@@ -107,9 +98,9 @@ while (que.size()) {
 
 移除的结果是要把**该节点作为出发点所连接的节点**的 入度 减一。如果减一了之后入度为 0，才是我们要选取的下一个节点，才放入队列。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 #include <iostream>
 #include <vector>
 #include <queue>

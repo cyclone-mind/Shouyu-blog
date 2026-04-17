@@ -13,23 +13,16 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 栈与队列：逆波兰表达式
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**浏览次数:** 1
-**标签:** 算法笔记, 栈和队列, 代码随想录, 数据结构与算法, 栈与队列
-
 ## 摘要
 给你一个字符串数组tokens，表示一个根据逆波兰表示法表示的算术表达式。
 
 ## 正文
-#### 题目描述
+## 题目描述
 
 给你一个字符串数组`tokens`，表示一个根据逆波兰表示法表示的算术表达式。 请你计算该表达式。返回一个表示表达式值的整数。
-题目链接：https://leetcode.cn/problems/evaluate-reverse-polish-notation文章讲解：https://programmercarl.com/0150.%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC.html
+[题目链接](https://leetcode.cn/problems/evaluate-reverse-polish-notation[文章讲解]https://programmercarl.com/0150.%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC.html)
 
-#### 思路
+## 思路
 
 实际上逆波兰表达式对于计算机十分友好，对于表达式人类能够清晰地理解哪部分先计算，哪部分后计算。对于逆波兰表达式，只需要放到栈中一个个取就行了。
 
@@ -37,9 +30,9 @@ tags:
 
 将`string`转为`int`或`long long`类型，可使用`stoi`和`stoll`。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     int evalRPN(vector<string>& tokens) {

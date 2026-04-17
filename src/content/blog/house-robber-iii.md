@@ -11,19 +11,7 @@ tags:
   - 树形DP
 ---
 
-# 打家劫舍III
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 动态规划, 算法, 树形DP, 二叉树, Leetcode
-
-## 摘要
-小偷又来了
-
-## 正文
-# 打家劫舍III
-
-#### 题目描述
+## 题目描述
 
 小偷又发现了一个新的可行窃的地区。这个地区只有一个入口，我们称之为`root`。
 
@@ -39,11 +27,11 @@ tags:
 解释: 小偷一晚能够盗取的最高金额 3 + 3 + 1 = 7
 ```
 
-题目链接：https://leetcode.cn/problems/house-robber-iii/
+[题目链接](https://leetcode.cn/problems/house-robber-iii/)
 
-文章讲解：https://programmercarl.com/0337.%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8DIII.html
+[文章讲解](https://programmercarl.com/0337.%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8DIII.html)
 
-#### 思路
+## 思路
 
 首次遇见树形 dp ！也不奇怪，数组的dp见过了 树形的dp也很正常，只要熟练掌握树的遍历就可以。
 
@@ -95,9 +83,9 @@ dp数组及下标含义：数组第一个元素记录不偷该节点所得到的
 
 **最后头结点就是 取下标0 和 下标1的最大值就是偷得的最大金钱**。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 vector<int> traversal(TreeNode* node){
     if(node == nullptr) return vector<int>{0,0};
     vector<int> left = traversal(node->left);

@@ -15,20 +15,17 @@ tags:
   - Leetcode
 ---
 
-## 正文
-# 岛屿数量-深搜
-
-#### 题目描述
+## 题目描述
 
 给定一个由 1（陆地）和 0（水）组成的矩阵，你需要计算岛屿的数量。岛屿由水平方向或垂直方向上相邻的陆地连接而成，并且四周都是水域。你可以假设矩阵外均被水包围。
 
 具体描述见题目链接
 
-题目链接：https://kamacoder.com/problempage.php?pid=1171
+[题目链接](https://kamacoder.com/problempage.php?pid=1171)
 
-文章讲解：https://programmercarl.com/kamacoder/0099.%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%95%B0%E9%87%8F%E6%B7%B1%E6%90%9C.html
+[文章讲解](https://programmercarl.com/kamacoder/0099.%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%95%B0%E9%87%8F%E6%B7%B1%E6%90%9C.html)
 
-#### 思路
+## 思路
 
 要求出岛屿数量，需要知道什么时候踏上了一座全新的岛屿，之前未曾踏足过的岛屿。
 
@@ -38,9 +35,9 @@ tags:
 
 注意，这道题目没有回溯是因为没有需要撤销的选择，即我们不需要把已经标记过的陆地撤销标记
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 #include <iostream>
 #include <queue>
 #include <utility>
@@ -94,7 +91,7 @@ int main() {
 }
 ```
 
-#### 深搜的另一种实现
+### 深搜的另一种实现
 
 上一种深搜的代码呢是把递归的终止条件写在了`if (visited[next_x][next_y] == false && gird[next_x][next_y] == 1)`里面。进入到递归之前就将 visited 标记为 true。
 
@@ -102,7 +99,7 @@ int main() {
 
 而还有一种写法是显式写递归的终止条件，且进入到递归之后再将 visited 标记为 true。
 
-```C++
+```cpp
 // 版本二
 #include <iostream>
 #include <vector>

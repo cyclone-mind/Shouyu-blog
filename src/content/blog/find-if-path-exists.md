@@ -11,26 +11,17 @@ tags:
   - 并查集
 ---
 
-# 寻找存在的路径
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 图论, 数据结构, 算法, 并查集, Union-Find, Leetcode
-
-## 正文
-# 寻找存在的路径
-
-#### 题目描述
+## 题目描述
 
 给定一个包含 n 个节点的无向图中，节点编号从 1 到 n （含 1 和 n ）
 
 你的任务是判断是否有一条从节点 source 出发到节点 destination 的路径存在。
 
-题目链接：https://kamacoder.com/problempage.php?pid=1179
+[题目链接](https://kamacoder.com/problempage.php?pid=1179)
 
-文章讲解：https://programmercarl.com/kamacoder/0107.%E5%AF%BB%E6%89%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E8%B7%AF%E5%BE%84.html
+[文章讲解](https://programmercarl.com/kamacoder/0107.%E5%AF%BB%E6%89%BE%E5%AD%98%E5%9C%A8%E7%9A%84%E8%B7%AF%E5%BE%84.html)
 
-#### 思考
+## 思考
 
 本题题意有几个关键点：
 
@@ -62,9 +53,9 @@ tags:
 
 不再需要构建图了，而是把所有边合并即可，形成多个节点组成的集合。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 // 给定一个包含 n 个节点的无向图中，节点编号从 1 到 n （含 1 和 n ）。
 // 你的任务是判断是否有一条从节点 source 出发到节点 destination 的路径存在。
 #include <vector>

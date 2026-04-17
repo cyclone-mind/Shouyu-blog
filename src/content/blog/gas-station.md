@@ -11,16 +11,7 @@ tags:
   - 数组
 ---
 
-# 加油站
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 贪心, 算法, 贪心算法, 数组, Leetcode
-
-## 正文
-# 加油站
-
-#### 题目描述
+## 题目描述
 
 在一条环路上有 N 个加油站，其中第 i 个加油站有汽油 gas[i] 升。
 
@@ -36,11 +27,11 @@ tags:
 
 * 输入数组中的元素均为非负数。
 
-题目链接：https://leetcode.cn/problems/gas-station/
+[题目链接](https://leetcode.cn/problems/gas-station/)
 
-文章讲解：https://programmercarl.com/0134.%E5%8A%A0%E6%B2%B9%E7%AB%99.html
+[文章讲解](https://programmercarl.com/0134.%E5%8A%A0%E6%B2%B9%E7%AB%99.html)
 
-#### 思考
+## 思考
 
 要走遍所有加油站，要保证每步的剩余油量是正的。
 
@@ -80,9 +71,9 @@ tags:
 
 1. 全局最优：通过局部的贪心选择，最终得到全局最优解
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {

@@ -21,28 +21,28 @@ tags:
 ## 正文
 # 有向图的完全可达性
 
-#### 题目描述
+## 题目描述
 
 给定一个有向图，包含 N 个节点，节点编号分别为 1，2，...，N。现从 1 号节点开始，如果可以从 1 号节点的边可以到达任何节点，则输出 1，否则输出 -1。
 
-题目链接：https://kamacoder.com/problempage.php?pid=1177
+[题目链接](https://kamacoder.com/problempage.php?pid=1177)
 
-文章讲解：https://programmercarl.com/kamacoder/0105.%E6%9C%89%E5%90%91%E5%9B%BE%E7%9A%84%E5%AE%8C%E5%85%A8%E5%8F%AF%E8%BE%BE%E6%80%A7.html
+[文章讲解](https://programmercarl.com/kamacoder/0105.%E6%9C%89%E5%90%91%E5%9B%BE%E7%9A%84%E5%AE%8C%E5%85%A8%E5%8F%AF%E8%BE%BE%E6%80%A7.html)
 
-#### 思路
+## 思路
 
 目标是判断图是否强连通（从任意节点都能到达任意其他节点）。这里进行了简化，只检查从节点1能否到达所有其他节点。
 
 因为节点编号都从1开始，因此选择K+1、 N+1大小
 
-```C++
+```cpp
 vector<list<int>> grah(N+1);  // 邻接表存储图
 vector<bool> visit(N + 1, false);  // 访问标记数组
 ```
 
 ##### 构建图
 
-```C++
+```cpp
 vector<list<int>> grah(N+1);
 for(int i = 0;i < K;i++){
     cin >> s >> t;
@@ -52,7 +52,7 @@ for(int i = 0;i < K;i++){
 
 ##### 连通性检查
 
-```C++
+```cpp
 for(int i = 1;i<visit.size();i++){
     if(visit[i] == false) {
         cout << -1 << endl;  // 存在未访问节点，非强连通
@@ -76,9 +76,9 @@ cout << 1 << endl;  // 所有节点都被访问，强连通
 
 这种保证了只要在递归内，当前节点一定是已经标记过的。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 #include <iostream>
 #include <vector>
 #include <list>

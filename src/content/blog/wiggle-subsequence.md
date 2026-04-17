@@ -13,16 +13,7 @@ tags:
   - Leetcode
 ---
 
-# 摆动序列
-
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 贪心, 算法, 贪心算法, 动态规划, 数组, Leetcode
-
-## 正文
-# 摆动序列
-
-#### 题目描述
+## 题目描述
 
 如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为摆动序列。第一个差（如果存在的话）可能是正数或负数。少于两个元素的序列也是摆动序列。
 
@@ -30,13 +21,13 @@ tags:
 
 给定一个整数序列，返回作为摆动序列的最长子序列的长度。 通过从原始序列中删除一些（也可以不删除）元素来获得子序列，剩下的元素保持其原始顺序。
 
-题目链接：https://leetcode.cn/problems/wiggle-subsequence/
+[题目链接](https://leetcode.cn/problems/wiggle-subsequence/)
 
-文章链接：https://programmercarl.com/0376.%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97.html
+[文章链接](https://programmercarl.com/0376.%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97.html)
 
-#### 思考
+## 思考
 
-##### 贪心解法
+### 贪心解法
 
 摆动序列的关键是要找到峰值。
 
@@ -84,11 +75,11 @@ curdiff = 1、0、0、1、1
 
 我们需要遇到峰值时才更新prediff，让prediff = curdiff，这样prediff再单调平坡的时候不会变化。
 
-##### 动态规划思路
+### 动态规划思路
 
 定义
 
-```C++
+```cpp
 // dp[i][0]: 以第i个元素结尾，且第i-1到第i是上升的最长摆动序列长度
 // dp[i][1]: 以第i个元素结尾，且第i-1到第i是下降的最长摆动序列长度
 ```
@@ -113,7 +104,7 @@ curdiff = 1、0、0、1、1
 
 对于第i个元素，若它比前一个元素小，同理。。。
 
-##### 优化
+### 优化
 
 动态规划的思想其实是状态转移得体现，我们抓住状态转移的本质：
 
@@ -121,11 +112,11 @@ curdiff = 1、0、0、1、1
 
 这里得上升下降序列指以前一个元素结尾的最长摆动序列
 
-#### 代码实现
+## 代码实现
 
 贪心
 
-```C++
+```cpp
 #include <vector>
 using namespace std;
 
@@ -150,7 +141,7 @@ int main(){}
 
 动态规划思路
 
-```C++
+```cpp
 int wiggleMaxLengthDP(vector<int> &nums) {
     if (nums.size() < 2)
         return nums.size();
@@ -182,7 +173,7 @@ int wiggleMaxLengthDP(vector<int> &nums) {
 
 优化动态规划
 
-```C++
+```cpp
 int wiggleMaxLengthDPOptimized(vector<int> &nums) {
     if (nums.size() < 2)
         return nums.size();

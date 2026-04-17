@@ -15,32 +15,23 @@ tags:
   - Leetcode
 ---
 
-# 所有可达路径
-
-**发布日期:** 2025/12/21
-**阅读时间:** 3 分钟
-**标签:** 算法笔记, 图论, 数据结构, 算法, 深度优先搜索, DFS, 路径问题, Leetcode
-
-## 正文
-# 所有可达路径
-
-#### 题目描述
+## 题目描述
 
 给定一个有 n 个节点的有向无环图，节点编号从 1 到 n。请编写一个函数，找出并返回所有从节点 1 到节点 n 的路径。每条路径应以节点编号的列表形式表示。
 
-###### 输入描述
+### 输入描述
 
 第一行包含两个整数 N，M，表示图中拥有 N 个节点，M 条边
 
 后续 M 行，每行包含两个整数 s 和 t，表示图中的 s 节点与 t 节点中有一条路径
 
-###### 输出描述
+### 输出描述
 
 输出所有的可达路径，路径中所有节点之间空格隔开，每条路径独占一行，存在多条路径，路径输出的顺序可任意。如果不存在任何一条路径，则输出 -1。
 
 **注意输出的序列中，最后一个节点后面没有空格！**例如正确的答案是`1 3 5`,而不是`1 3 5`， 5后面没有空格！
 
-###### 输入示例
+### 输入示例
 
 ```bash
 5 5
@@ -51,18 +42,18 @@ tags:
 4 5
 ```
 
-###### 输出示例
+### 输出示例
 
 ```bash
 1 3 5
 1 2 4 5
 ```
 
-题目链接：https://kamacoder.com/problempage.php?pid=1170
+[题目链接](https://kamacoder.com/problempage.php?pid=1170)
 
-文章讲解：https://programmercarl.com/kamacoder/0098.%E6%89%80%E6%9C%89%E5%8F%AF%E8%BE%BE%E8%B7%AF%E5%BE%84.html
+[文章讲解](https://programmercarl.com/kamacoder/0098.%E6%89%80%E6%9C%89%E5%8F%AF%E8%BE%BE%E8%B7%AF%E5%BE%84.html)
 
-#### 思路
+## 思路
 
 这道题是入门图论的好题目，可以掌握 dfs 和 bfs 的基础写法。
 
@@ -78,7 +69,7 @@ tags:
 
 图的保存可以使用邻接矩阵，构建方便。构建时需要注意节点的序号是从 1 开始的，而不是 0，因此可以构建一个 N+1 大小的二维数组，这样`graph[1][2]`就表示 1 节点和 2 节点之间的边了。
 
-##### 深搜三部曲
+## 深搜三部曲
 
 **第一步：确定函数的目的和参数**
 
@@ -86,27 +77,28 @@ tags:
 
 * 需要什么信息？
 
-需要知道图长什么样 -> const vector<vector<int>> &graph
-需要知道当前在哪 -> int currentNode
-需要知道目标在哪 -> int targetNode
+需要知道图长什么样 -> `const vector<vector<int>> &graph`
+需要知道当前在哪 -> `int currentNode`
+需要知道目标在哪 -> `int targetNode`
 
-* 需要知道图长什么样 -> const vector<vector<int>> &graph
+* 需要知道图长什么样 -> `const vector<vector<int>> &graph`
 
-* 需要知道当前在哪 -> int currentNode
+* 需要知道当前在哪 -> `int currentNode`
 
-* 需要知道目标在哪 -> int targetNode
+* 需要知道目标在哪 -> `int targetNode`
 
-* 初步函数签名：void findPaths(const vector<vector<int>> &graph, int currentNode, int targetNode)
+* 初步函数签名：`void findPaths(const vector<vector<int>> &graph, int currentNode, int targetNode)`
 
 **第二步：确定递归的终止条件**
 
 * 什么时候停下来？ 当到达目的地时。
 
-* 条件：currentNode == targetNode。
+* 条件：`currentNode == targetNode`。
 
 * 停下来做什么？ 已经找到了一条完整路径。这条路径存储在某个地方（一个全局的 path 向量）。需要把它保存到一个最终结果集里（比如 result 向量）。
 
 * 代码实现：
+* 
 if (currentNode == targetNode) {
     result.push_back(path); // `path` 和 `result` 需要在函数外定义
     return;
@@ -116,7 +108,7 @@ if (currentNode == targetNode) {
 
 * 如果没到终点，该做什么？ 遍历当前节点能到达的所有邻居节点。
 
-* 如何遍历？ 写一个循环，从 1 到 N，检查 graph[currentNode][neighbor] 是否为 1。
+* 如何遍历？ 写一个循环，从 1 到 N，检查 `graph[currentNode][neighbor]` 是否为 1。
 
 * 对每个邻居节点做什么？
 
@@ -124,7 +116,9 @@ if (currentNode == targetNode) {
 探索 (Explore)：以这个邻居为新的当前节点，递归调用函数。findPaths(graph, neighbor, targetNode);
 撤销 (Unchoose / Backtrack)：当对这个邻居的探索结束后（即递归调用返回后），要把它从当前路径中移除，以便于探索当前节点的其他邻居。path.pop_back();
 
-* 代码实现：
+* 代码实现
+
+```cpp
 for (int neighbor = 1; neighbor <= N; ++neighbor) {
     if (graph[currentNode][neighbor] == 1) {
         path.push_back(neighbor);
@@ -132,14 +126,15 @@ for (int neighbor = 1; neighbor <= N; ++neighbor) {
         path.pop_back();
     }
 }
+```
 
 把深搜的过程理解成**走迷宫**：
 
 1. 起点：从节点 x 开始（第一次调用时是从节点 1 开始）。
 
-1. 目标：目标是走到节点 n。
+2. 目标：目标是走到节点 n。
 
-1. 路径记录：手上有一个本子 (path)，每走到一个新节点，你就在本子上记下它的编号。这是我们处理节点的逻辑，也就是说我们遍历到当前节点需要做什么
+3. 路径记录：手上有一个本子 (path)，每走到一个新节点，你就在本子上记下它的编号。这是我们处理节点的逻辑，也就是说我们遍历到当前节点需要做什么
 
 * 终止条件 (Base Case):
 if (x == n) {
@@ -175,7 +170,7 @@ for (int i = 1; i <= n; i++) {
 
 这个递归步骤有一点很重要就是**前进之前**就把 下一个节点写入到 path 中，而**不是进入到下个节点**才把下个节点写到 path 中。
 
-#### 经典的回溯算法范式
+### 经典的回溯算法范式
 
 这是经典的回溯算法范式，可以分解为三步：
 
@@ -193,9 +188,9 @@ for (int i = 1; i <= n; i++) {
 
 在这个递归步骤中，path 始终代表 “到达当前节点之前的路径”。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 #include <iostream>
 #include <vector>
 

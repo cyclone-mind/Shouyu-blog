@@ -20,11 +20,11 @@ tags:
 **标签:** 算法笔记, 字符串, 代码随想录, 数据结构与算法, Leetcode
 
 ## 正文
-题目链接：https://leetcode.cn/problems/reverse-string/description/
+[题目链接](https://leetcode.cn/problems/reverse-string/description/)
 
-文章讲解：https://programmercarl.com/0344.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.html
+[文章讲解](https://programmercarl.com/0344.%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.html)
 
-### 题目描述
+## 题目描述
 
 编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。
 
@@ -40,7 +40,7 @@ tags:
 输入：["H","a","n","n","a","h"]
 输出：["h","a","n","n","a","H"]
 
-### 思路
+## 思路
 
 该题目使用双指针法，头尾指针交换元素，然后向中间移动即可。
 
@@ -58,7 +58,7 @@ tags:
 
 这道题比较简单，直接贴代码。
 
-```C++
+```cpp
 #include <iostream>
 #include <vector>
 using namespace std;

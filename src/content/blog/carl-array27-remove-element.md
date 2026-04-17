@@ -13,18 +13,11 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 数组：27. 移除元素
+[题目链接](https://leetcode.cn/problems/remove-element/)
 
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 数组, 代码随想录, 数据结构与算法, Leetcode
+[文章讲解](https://programmercarl.com/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.html)
 
-## 正文
-题目链接：https://leetcode.cn/problems/remove-element/
-
-文章讲解：https://programmercarl.com/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.html
-
-### 题目描述
+## 题目描述
 
 给你一个数组`nums`和一个值`val`，你需要**原地**移除所有数值等于`val`的元素。元素的顺序可能发生改变。然后返回`nums`中与`val`不同的元素的数量。
 
@@ -53,13 +46,13 @@ tags:
 你在返回的 k 个元素之外留下了什么并不重要（因此它们并不计入评测）。
 ```
 
-#### 思路
+## 思路
 
-##### 暴力解法
+### 暴力解法
 
 第一层循环找到需要移除的值，第二层循环依次将需要移除的值的后面所有的值向前移一位
 
-```C++
+```cpp
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
@@ -86,13 +79,13 @@ public:
 //空间复杂度：O(1)
 ```
 
-##### 双指针法
+### 双指针法
 
 暴力解法需要循环两次，每次找到一个值。那反过来，我们每次循环找到两个值不就行了？不也是一样的效果？
 
 我们使用快慢指针，一个快指针用于**找移除目标值**，一个慢指针用于**更新元素**。
 
-```C++
+```cpp
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
@@ -115,7 +108,7 @@ public:
 
 也可以使用左右指针，没错，左指针用来找 需要移除的元素，右指针的值用来更新左指针找到的元素。
 
-```C++
+```cpp
 int removeElement3(std::vector<int> &nums, int val)
 {
     // 当左指针 left 指向的元素是我们想要移除的 val 时，我们尝试用右指针 right 指向的元素去覆盖它。
@@ -140,14 +133,14 @@ int removeElement3(std::vector<int> &nums, int val)
 //空间复杂度：O(1)
 ```
 
-#### 启发
+## 启发
 
 1. 原地修改数组的做法，这是题目要求
 
 1. 只要遇到"需要筛选/移动/覆盖数组元素"的问题，都可以优先考虑双指针法。
 
-#### 困难
+## 困难
 
 1. 边界条件的处理
 
-1. 指针的移动逻辑，什么时候++ 什么时候--
+2. 指针的移动逻辑，什么时候++ 什么时候--

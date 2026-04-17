@@ -21,7 +21,7 @@ tags:
 ## 正文
 # 不同的子序列
 
-#### 题目描述
+## 题目描述
 
 给你两个字符串`s`和`t`，统计并返回在`s`的**子序列**中`t`出现的个数。
 
@@ -29,7 +29,7 @@ tags:
 
 **示例 1：**
 
-```C++
+```cpp
 输入：s = "rabbbit", t = "rabbit"
 输出：3
 解释：
@@ -39,23 +39,23 @@ rabbbit
 rabbbit
 ```
 
-题目链接：https://leetcode.cn/problems/distinct-subsequences
+[题目链接](https://leetcode.cn/problems/distinct-subsequences)
 
-文章讲解：https://programmercarl.com/0115.%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%97.html
+[文章讲解](https://programmercarl.com/0115.%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%97.html)
 
-#### 思路
+## 思路
 
 并非是 一个字符串的子序列**是否**在另一个字符串中出现过，而是出现的**次数**。
 
 是否出现  可以转化为次数等于字符串长度，而这道题就再用转化了。
 
-#### 动规五部曲
+## 递归五部曲
 
-##### 1、dp 数组及下标含义
+### 1、dp 数组及下标含义
 
 `dp[i][j]`：以 i-1为结尾的字符串的子序列 中 出现以j-1为结尾的字符串 t 的个数为`dp[i][j]`。
 
-##### 2、递推公式
+### 2、递推公式
 
 两种情况：
 
@@ -81,7 +81,7 @@ b) 不使用当前字符匹配：dp[i-1][j]（表示跳过s的当前字符）。
 
 * 只能选择不匹配当前字符：继承dp[i-1][j]
 
-##### 3、初始化
+### 3、初始化
 
 递推公式有边界条件，j = 0 和 i = 0 的情况。
 
@@ -89,17 +89,17 @@ b) 不使用当前字符匹配：dp[i-1][j]（表示跳过s的当前字符）。
 
 `dp[i][0] = 1`，空字符串是任何字符串的子序列。
 
-##### 4、确定遍历顺序
+### 4、确定遍历顺序
 
 从上到下，从左到右
 
-##### 5、举例推导
+### 5、举例推导
 
 以s："baegg"，t："bag"为例，推导dp数组状态如下：
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 int numDistinct(string s, string t) {
     vector<vector<unsigned int>> dp(s.size() + 1, vector<unsigned int>(t.size() + 1,0));
     for(int j = 0;j < t.size() + 1;j++) dp[0][j] = 0;

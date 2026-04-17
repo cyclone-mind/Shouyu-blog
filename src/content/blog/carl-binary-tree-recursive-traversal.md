@@ -13,14 +13,7 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 二叉树：递归遍历
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法, Leetcode
-
-## 正文
-题目链接：
+[题目链接]
 
 * 144.二叉树的前序遍历
 
@@ -28,19 +21,19 @@ tags:
 
 * 94.二叉树的中序遍历
 
-文章讲解：https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%80%92%E5%BD%92%E9%81%8D%E5%8E%86.html
+[文章讲解](https://programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%80%92%E5%BD%92%E9%81%8D%E5%8E%86.html)
 
-#### 题目描述
+## 题目描述
 
 给你二叉树的根节点`root`，返回它节点值的**前序**、中序、后序 遍历。
 
-#### 思路
+## 思路
 
 得益于二叉树的链表实现，对于这三种遍历，天然适合递归。
 
 前、中、后指的是“中”的位置。
 
-##### 递归三要素
+## 递归三要素
 
 1. **确定递归函数的参数和返回值
 
@@ -50,9 +43,9 @@ tags:
 
 题目要求返回的是一个数组，那么一般情况下我们借助辅助函数的形式来对结果数组进行操作。逻辑更清晰。
 
-##### 前序遍历 中左右
+### 前序遍历 中左右
 
-```C++
+```cpp
 void preorder(TreeNode *node, vector<int> &result) {
   if (node == nullptr) return; // 终止条件
   result.push_back(node->val); // 中
@@ -66,9 +59,9 @@ vector<int> preorderTraversal(TreeNode *root) {
 }
 ```
 
-##### 中序遍历 左中右
+### 中序遍历 左中右
 
-```C++
+```cpp
 void inorder(TreeNode *root, std::vector<int> &result){
     if(root == nullptr) return ;
     inorder(root->left,result);
@@ -82,9 +75,9 @@ std::vector<int> inorderTraversal(TreeNode *root) {
 }
 ```
 
-##### 后序遍历 左右中
+### 后序遍历 左右中
 
-```C++
+```cpp
 void postorder(TreeNode *root, std::vector<int> &result){
     if(root == nullptr) return ;
     postorder(root->left,result);

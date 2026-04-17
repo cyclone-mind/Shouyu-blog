@@ -20,7 +20,7 @@ tags:
 **标签:** 算法笔记, 栈和队列, 代码随想录, 数据结构与算法, 栈, 队列
 
 ## 正文
-#### 题目描述
+## 题目描述
 
 给你一个字符串 path ，表示指向某一文件或目录的 Unix 风格 绝对路径 （以 '/' 开头），请你将其转化为 更加简洁的规范路径。
 
@@ -38,9 +38,9 @@ tags:
 此外，路径仅包含从根目录到目标文件或目录的路径上的目录（即，不含 '.' 或 '..'）。
 返回简化后得到的 规范路径 。
 
-题目链接：https://leetcode.cn/problems/simplify-path
+[题目链接](https://leetcode.cn/problems/simplify-path)
 
-#### 思考
+## 思考
 
 逐步寻找`/`，或者说以/分割，提取出来字符，若`.`或`空`就跳过。若`..`将栈元素弹出。若其余，则推入栈。栈里面是有效的路径的字符串。
 
@@ -56,7 +56,7 @@ stringstream 是 C++ 标准库中的一个类，属于`<sstream>`头文件。它
 
 示例：
 
-```C++
+```cpp
 #include <sstream>
 #include <string>
 using namespace std;
@@ -71,7 +71,7 @@ ss >> a >> b; // a = 123, b = 456
 
 `getline`是一个函数，可以从输入流中读取一行内容，直到遇到指定的分隔符（默认是换行符 \n，但可以自定义）。
 
-```C++
+```cpp
 while (getline(ss, segment, '/')) {
     // segment 是被 '/' 分割出来的每一段字符串
 }
@@ -85,9 +85,9 @@ while (getline(ss, segment, '/')) {
 
 这样可以很方便地处理路径、分割字符串等操作。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     string simplifyPath(string path) {

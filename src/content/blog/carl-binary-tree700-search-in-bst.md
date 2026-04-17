@@ -13,26 +13,19 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 二叉树：700. 二叉搜索树中的搜索
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法, Leetcode
-
-## 正文
-#### 题目描述
+## 题目描述
 
 给定二叉搜索树（BST）的根节点`root`和一个整数值`val`。
 
 你需要在 BST 中找到节点值等于`val`的节点。 返回以该节点为根的子树。 如果节点不存在，则返回`null`。
 
-**注意:**合并过程必须从两个树的根节点开始
+**注意**合并过程必须从两个树的根节点开始
 
-题目链接：https://leetcode.cn/problems/search-in-a-binary-search-tree
+[题目链接](https://leetcode.cn/problems/search-in-a-binary-search-tree)
 
-文章讲解：https://programmercarl.com/0700.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%90%9C%E7%B4%A2.html
+[文章讲解](https://programmercarl.com/0700.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%90%9C%E7%B4%A2.html)
 
-#### 思考
+## 思考
 
 首先想法是遍历每个节点，看看哪个节点的值是val，然后返回这个节点。本题是二叉搜索树，节点是有顺序的，所以我们可以有方向的搜索。
 
@@ -42,7 +35,7 @@ tags:
 
 另外本题要求返回目标节点子树，有返回值的。进入左右递归的返回值是什么？应该返回的是当前左子树往下搜索的目标节点、或者返回当前右子树往下搜索的目标节点。
 
-#### 递归三部曲
+## 递归三部曲
 
 1、确定递归函数的参数和返回值
 
@@ -58,9 +51,9 @@ tags:
 
 如果root->val > val，搜索左子树，如果root->val < val，就搜索右子树，最后如果都没有搜索到，就返回NULL。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     TreeNode* searchBST(TreeNode* root, int val) {

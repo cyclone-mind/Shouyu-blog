@@ -17,7 +17,7 @@ tags:
 给定一个非空的整数数组，返回其中出现频率前 k 高的元素。
 
 ## 正文
-#### 题目描述
+## 题目描述
 
 给定一个非空的整数数组，返回其中出现频率前 k 高的元素。
 
@@ -43,11 +43,11 @@ tags:
 
 * 你可以按任意顺序返回答案。
 
-题目链接：https://leetcode.cn/problems/top-k-frequent-elements/
+[题目链接](https://leetcode.cn/problems/top-k-frequent-elements/)
 
-文章链接：https://programmercarl.com/0347.%E5%89%8DK%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0.html
+[文章链接]https://programmercarl.com/0347.%E5%89%8DK%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0.html
 
-#### 思路
+## 思路
 
 三块内容：
 
@@ -61,7 +61,7 @@ tags:
 
 这种思路实现如下：
 
-```C++
+```cpp
 #include <vector>
 #include <map>
 #include <algorithm> // for std::sort
@@ -112,9 +112,9 @@ vector<int> topKFrequent(vector<int>& nums, int k) {
 
 使用小顶堆，若元素是纯数字，则直接排序，若元素是频率和数字，我们需要使用`std::pair<int, int>`来保存元素，并且排序顺序是按照`pair`中的第一个元素来。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     vector<int> topKFrequent(vector<int>& nums, int k) {

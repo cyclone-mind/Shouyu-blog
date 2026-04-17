@@ -34,7 +34,7 @@ tags:
 
 ##### 基础框架
 
-```C++
+```cpp
 void dfs(参数){
     处理节点
     dfs(图，选择的节点); // 递归
@@ -44,7 +44,7 @@ void dfs(参数){
 
 ##### 回溯法框架
 
-```C++
+```cpp
 void backtracking(参数) {
     if (终止条件) {
         存放结果;
@@ -60,7 +60,7 @@ void backtracking(参数) {
 
 ##### 图论中dfs框架
 
-```C++
+```cpp
 void dfs(参数) {
     if (终止条件) {
         存放结果;

@@ -12,24 +12,17 @@ tags:
   - 数据结构与算法
 ---
 
-# 代码随想录 二叉树：左下角的值
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法
-
-## 正文
-#### 题目描述
+## 题目描述
 
 给定一个二叉树的**根节点**`root`，请找出该二叉树的**最底层 最左边**节点的值。
 
 假设二叉树中至少有一个节点。
 
-题目链接：https://leetcode.cn/problems/sum-of-left-leaves/
+[题目链接](https://leetcode.cn/problems/sum-of-left-leaves/)
 
-文章讲解：https://programmercarl.com/0404.%E5%B7%A6%E5%8F%B6%E5%AD%90%E4%B9%8B%E5%92%8C.html
+[文章讲解](https://programmercarl.com/0404.%E5%B7%A6%E5%8F%B6%E5%AD%90%E4%B9%8B%E5%92%8C.html)
 
-#### 思考
+## 思考
 
 层序遍历十分简单，不断把 result 设置为每层的最左边(队列中第一个)的值。不断更新这个result。那么最后的result自然是最底层的最左边值。
 
@@ -39,7 +32,7 @@ tags:
 
 最左边要求我们第一次遇到最大深度时更新节点值。
 
-##### 递归三部曲
+## 递归三部曲
 
 1、递归函数
 
@@ -59,11 +52,11 @@ tags:
 
 另外需要及时回溯，因为节点深度随着节点在不断变化。递归需要深度加一，回溯需要深度减一。
 
-#### 代码实现
+## 代码实现
 
 层序遍历
 
-```C++
+```cpp
 class Solution {
 public:
     int findBottomLeftValue(TreeNode* root) {
@@ -86,7 +79,7 @@ public:
 
 递归前序遍历
 
-```C++
+```cpp
 class Solution {
 public:
     int result;

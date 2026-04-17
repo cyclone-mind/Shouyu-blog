@@ -13,14 +13,7 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 链表：24. 两两交换链表中的节点
-
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 链表, 代码随想录, 数据结构与算法, Leetcode
-
-## 正文
-力扣题目链接(opens new window)
+力扣题目链接
 
 代码随想录链接：https://programmercarl.com/0024.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html
 
@@ -47,7 +40,7 @@ tags:
 输出：[1]
 ```
 
-#### 思路
+## 思路
 
 1. 涉及到修改节点的，使用虚拟头节点比较好。
 
@@ -73,7 +66,7 @@ tags:
 
 参考代码
 
-```C++
+```cpp
 #include <iostream>
 struct ListNode
 {

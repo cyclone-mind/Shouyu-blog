@@ -12,14 +12,7 @@ tags:
   - 数据结构与算法
 ---
 
-# 代码随想录 二叉树：合并二叉树
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法
-
-## 正文
-#### 题目描述
+## 题目描述
 
 给你两棵二叉树：`root1`和`root2`。
 
@@ -27,13 +20,13 @@ tags:
 
 返回合并后的二叉树。
 
-**注意:**合并过程必须从两个树的根节点开始
+**注意**合并过程必须从两个树的根节点开始
 
-题目链接：https://leetcode.cn/problems/merge-two-binary-trees/
+[题目链接](https://leetcode.cn/problems/merge-two-binary-trees/)
 
-文章讲解：https://programmercarl.com/0617.%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91.html
+[文章讲解](https://programmercarl.com/0617.%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91.html)
 
-#### 思考
+## 思考
 
 这道题是合并两个二叉树，那么应该同时遍历两棵树，并且是同样的遍历顺序，也就是递归函数中传入两个数的根节点，同时递归遍历。
 
@@ -45,7 +38,7 @@ tags:
 
 所以考虑两颗树的节点是左空右不空，左不空右空，都空。这三种特殊情况。
 
-#### 递归三部曲
+## 递归三部曲
 
 1、确定递归函数的参数和返回值
 
@@ -65,9 +58,9 @@ tags:
 
 最终t1就是合并之后的根节点。并返回
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     TreeNode* mergeTrees(TreeNode* root1, TreeNode* root2) {

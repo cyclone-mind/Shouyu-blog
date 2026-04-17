@@ -23,7 +23,7 @@ tags:
 请你仅使用两个队列实现一个后入先出（LIFO）的栈
 
 ## 正文
-#### 题目描述
+## 题目描述
 
 请你仅使用两个队列实现一个后入先出（LIFO）的栈，并支持普通栈的全部四种操作（`push`、`top`、`pop`和`empty`）。
 实现`MyStack`类：
@@ -36,11 +36,11 @@ tags:
 
 * boolean empty() 如果栈是空的，返回 true ；否则，返回 false 。
 
-题目链接：https://leetcode.cn/problems/implement-stack-using-queues
+[题目链接](https://leetcode.cn/problems/implement-stack-using-queues)
 
-文章链接：https://programmercarl.com/0225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.html
+[文章链接]https://programmercarl.com/0225.%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88.html
 
-#### 思路
+## 思路
 
 两个栈可以将 先进后出 改为 先进先出，而两个队列仍然是 先进先出 的顺序，并不能改为 先进后出的顺序。因此本题目可以有华为一个队列实现。
 
@@ -52,9 +52,9 @@ top 可以借助 已实现的 pop 先弹出并拿到元素，再追加。
 
 empty 判断队列是否为空即可。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class MyStack {
 private:
 queue<int> que;

@@ -13,25 +13,19 @@ tags:
   - Leetcode
 ---
 
-## 摘要
-K次取反后最大化数组和
-
-## 正文
-# K次取反后最大化数组和
-
-#### 题目描述
+## 题目描述
 
 给定一个整数数组 A，我们只能用以下方法修改该数组：我们选择某个索引 i 并将 A[i] 替换为 -A[i]，然后总共重复这个过程 K 次。（我们可以多次选择同一个索引 i。）
 
 以这种方式修改数组后，返回数组可能的最大和。
 
-题目链接：https://leetcode.cn/problems/maximize-sum-of-array-after-k-negations/
+[题目链接](https://leetcode.cn/problems/maximize-sum-of-array-after-k-negations/)
 
-文章讲解：https://leetcode.cn/problems/maximize-sum-of-array-after-k-negations
+[文章讲解](https://leetcode.cn/problems/maximize-sum-of-array-after-k-negations)
 
-#### 思考
+## 思考
 
-##### 贪心解法
+### 贪心解法
 
 本题思路应该比较简单，尽可能让小的负数取反，尽可能让小的非负数取反。整体和最大。
 
@@ -53,9 +47,9 @@ K次取反后最大化数组和
 
 * 第四步：求和
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 int largestSumAfterKNegations(vector<int>& A, int K){
     std::sort(A.begin(),A.end(),[](int a,int b){return abs(a) > abs(b);});
     for(int i = 0;i<A.size();i++){

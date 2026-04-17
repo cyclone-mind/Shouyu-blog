@@ -10,10 +10,8 @@ tags:
 ---
 
 ## 摘要
-JavaScript 逆向入门
 
-## 正文
-# 什么是 JS 逆向？
+JavaScript 逆向入门
 
 JS 逆向（JavaScript Reverse Engineering）指通过分析网页中 JavaScript 代码的加密逻辑，还原数据请求的加密参数生成过程。它是爬虫开发中绕过反爬机制的核心技术。JS逆向一般分为请求逆向和响应逆向。
 

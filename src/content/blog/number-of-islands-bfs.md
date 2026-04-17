@@ -15,20 +15,17 @@ tags:
   - Leetcode
 ---
 
-## 正文
-# 岛屿数量-广搜
-
-#### 题目描述
+## 题目描述
 
 给定一个由 1（陆地）和 0（水）组成的矩阵，你需要计算岛屿的数量。岛屿由水平方向或垂直方向上相邻的陆地连接而成，并且四周都是水域。你可以假设矩阵外均被水包围。
 
 具体描述见题目链接
 
-题目链接：https://kamacoder.com/problempage.php?pid=1171
+[题目链接](https://kamacoder.com/problempage.php?pid=1171)
 
-文章讲解：https://programmercarl.com/kamacoder/0099.%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%95%B0%E9%87%8F%E5%B9%BF%E6%90%9C.html
+[文章讲解](https://programmercarl.com/kamacoder/0099.%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%95%B0%E9%87%8F%E5%B9%BF%E6%90%9C.html)
 
-#### 思路
+## 思路
 
 广搜版岛屿的数量。
 
@@ -42,7 +39,7 @@ tags:
 
 超时写法
 
-```C++
+```cpp
 int dir[4][2] = {0, 1, 1, 0, -1, 0, 0, -1}; // 四个方向
 void bfs(vector<vector<char>>& grid, vector<vector<bool>>& visited, int x, int y) {
     queue<pair<int, int>> que;
@@ -67,7 +64,7 @@ void bfs(vector<vector<char>>& grid, vector<vector<bool>>& visited, int x, int y
 
 正确写法
 
-```C++
+```cpp
 int dir[4][2] = {0, 1, 1, 0, -1, 0, 0, -1}; // 四个方向
 void bfs(vector<vector<char>>& grid, vector<vector<bool>>& visited, int x, int y) {
     queue<pair<int, int>> que;
@@ -91,9 +88,9 @@ void bfs(vector<vector<char>>& grid, vector<vector<bool>>& visited, int x, int y
 }
 ```
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 #include <iostream>
 #include <queue>
 #include <utility>

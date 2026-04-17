@@ -14,10 +14,7 @@ tags:
   - Leetcode
 ---
 
-## 正文
-# 划分字母区间
-
-#### 题目描述
+## 题目描述
 
 给你一个字符串`s`。我们要把这个字符串划分为尽可能多的片段，同一字母最多出现在一个片段中。例如，字符串`"ababcc"`能够被分为`["abab", "cc"]`，但类似`["aba", "bcc"]`或`["ab", "ab", "cc"]`的划分是非法的。
 
@@ -25,17 +22,17 @@ tags:
 
 返回一个表示每个字符串片段的长度的列表。
 
-题目链接：https://leetcode.cn/problems/partition-labels/
+[题目链接](https://leetcode.cn/problems/partition-labels/)
 
 https://programmercarl.com/0763.%E5%88%92%E5%88%86%E5%AD%97%E6%AF%8D%E5%8C%BA%E9%97%B4.html
 
-#### 思考
+## 思考
 
 这道题直观想法，对于这个例子：
 
 **示例 1：**
 
-```C++
+```cpp
 输入：s = "ababcbacadefegdehijhklij"
 输出：[9,7,8]
 解释：
@@ -56,9 +53,9 @@ https://programmercarl.com/0763.%E5%88%92%E5%88%86%E5%AD%97%E6%AF%8D%E5%8C%BA%E9
 
 如图：
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     vector<int> partitionLabels(string s) {

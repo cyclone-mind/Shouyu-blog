@@ -13,22 +13,15 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 二叉树：102. 层序遍历
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法, Leetcode
-
-## 正文
-#### 题目描述
+## 题目描述
 
 给你二叉树的根节点 root ，返回其节点值的 层序遍历 。 （即逐层地，从左到右访问所有节点）。
 
-题目链接：https://leetcode.cn/problems/binary-tree-level-order-traversal
+[题目链接](https://leetcode.cn/problems/binary-tree-level-order-traversal)
 
-文章讲解：https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html
+[文章讲解](https://programmercarl.com/0102.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.html)
 
-#### 思路
+## 思路
 
 层序遍历要求一层一层，从左至右遍历。先上层再下层，先进先出。
 
@@ -71,9 +64,9 @@ tags:
 
 * 保存当前层结果：将  vec （当前层的所有节点值）添加到最终的结果 result 中：result.push_back(vec);
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {

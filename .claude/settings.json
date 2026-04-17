@@ -3,7 +3,10 @@
     "allow": [
       "WebSearch",
       "mcp__firecrawl__firecrawl_search",
-      "mcp__firecrawl__firecrawl_scrape"
+      "mcp__firecrawl__firecrawl_scrape",
+      "Bash(find src/content/blog -name \"*.md\" -exec sed -i 's/```C++/```cpp/g' {} +)",
+      "Bash(git -C d:/Administrator/works/Shouyu-blog status)",
+      "Bash(git -C d:/Administrator/works/Shouyu-blog diff --stat)"
     ]
   }
 }

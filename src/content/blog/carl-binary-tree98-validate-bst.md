@@ -13,14 +13,7 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 二叉树：98. 验证二叉搜索树
-
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法, Leetcode
-
-## 正文
-#### 题目描述
+## 题目描述
 
 给你一个二叉树的根节点`root`，判断其是否是一个有效的二叉搜索树。
 
@@ -32,13 +25,13 @@ tags:
 
 * 所有左子树和右子树自身必须也是二叉搜索树。
 
-题目链接：https://leetcode.cn/problems/validate-binary-search-tree/
+[题目链接](https://leetcode.cn/problems/validate-binary-search-tree/)
 
-文章讲解：https://programmercarl.com/0098.%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.html
+[文章讲解](https://programmercarl.com/0098.%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.html)
 
-#### 思考
+## 思考
 
-##### 后序遍历
+### 后序遍历
 
 如果使用后序遍历，我刚开始这样思考 “如果使用后序遍历呢？左子树是二叉搜索树，右子树也是二叉搜索树，并且左子树根节点小于中间节点小于右子树根节点，这样判断中间节点构成的树就是二叉搜索树”
 
@@ -66,17 +59,17 @@ tags:
 
 可以自定义一个结构体，包含：是否是BST、最大值、最小值。
 
-#### 易错点
+## 易错点
 
 后序遍历注意细节，本题有INT_MAX INT_MIN 测试用例，因此可以改为long long类型，使用LONG_MIN作为最小值。还需要注意，默认传进来的root-val，使用min和max函数得到当前子树的最小值和最大值是需要吧root-val强转为long long类型，才能使用min和max函数。
 
-##### 中序遍历
+### 中序遍历
 
 要知道中序遍历下，输出的二叉搜索树节点的数值是有序序列。
 
 所以只需要判断遍历的元素是不是从小到大即可。不断比较相邻元素大小。设置一个maxVal = LONG_MIN，符合条件就不断更新，不符合就返回 false，
 
-#### 递归三部曲
+## 递归三部曲
 
 1、确定递归函数的参数和返回值
 
@@ -100,11 +93,11 @@ tags:
 
 * 递归判断右子树是否为二叉搜索树
 
-#### 代码实现
+## 代码实现
 
 中序遍历
 
-```C++
+```cpp
 long long maxval = LONG_MIN;
 bool isValidBST(TreeNode* root) {
 	if(root == nullptr) return true;
@@ -118,7 +111,7 @@ bool isValidBST(TreeNode* root) {
 
 后序遍历
 
-```C++
+```cpp
 /*
 后序遍历法判断二叉搜索树
 每个节点递归返回：是否是BST、子树最大值、子树最小值

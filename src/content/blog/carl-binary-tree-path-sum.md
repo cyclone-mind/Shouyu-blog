@@ -12,28 +12,21 @@ tags:
   - 数据结构与算法
 ---
 
-# 代码随想录 二叉树：路径总和
-
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法
-
-## 正文
-#### 题目描述
+## 题目描述
 
 给你二叉树的根节点 root 和一个表示目标和的整数 targetSum 。判断该树中是否存在 根节点到叶子节点 的路径，这条路径上所有节点值相加等于目标和 targetSum 。如果存在，返回 true ；否则，返回 false 。
 
 叶子节点 是指没有子节点的节点
 
-题目链接：https://leetcode.cn/problems/path-sum/
+[题目链接](https://leetcode.cn/problems/path-sum/)
 
-文章讲解：https://programmercarl.com/0112.%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C.html
+[文章讲解](https://programmercarl.com/0112.%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C.html)
 
-#### 思考
+## 思考
 
 设置一个count跟随节点，记录遍历到该节点时的路径和。使用前序遍历。到达叶子节点时判断此时路径和是否等于目标和。等于则true，不等于则返回false，意味着此时路径不满足要求。
 
-##### 递归三部曲
+## 递归三部曲
 
 1、递归函数
 
@@ -55,11 +48,11 @@ count 去累加然后判断是否等于目标和
 
 递归函数是有返回值的，如果递归函数返回true，说明找到了合适的路径，应该立刻返回。
 
-#### 代码实现
+## 代码实现
 
 递归
 
-```C++
+```cpp
 class Solution {
 public:
     bool traversal(TreeNode* node, int count,int targetSum) {
@@ -87,7 +80,7 @@ public:
 };
 ```
 
-#### 拓展
+## 拓展
 
 要求输出所有满足条件的路径。比如：
 
@@ -120,7 +113,7 @@ public:
 
 从根节点开始，初始化 path 为根节点值，count = targetSum - root->val
 
-```C++
+```cpp
 class Solution {
 public:
     std::vector<std::vector<int>> result;

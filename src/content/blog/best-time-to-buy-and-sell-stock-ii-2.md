@@ -13,30 +13,21 @@ tags:
   - Leetcode
 ---
 
-# 买卖股票的最佳时机II
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 贪心, 算法, 贪心算法, 股票, 动态规划, Leetcode
-
-## 正文
-# 买卖股票的最佳时机II
-
-#### 题目描述
+## 题目描述
 
 给定一个数组，它的第  i 个元素是一支给定股票第 i 天的价格。
 
 设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。
 
-注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
+注意你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
 
-题目链接：https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/
+[题目链接](<https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/>)
 
-文章讲解：https://programmercarl.com/0122.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BAII.html
+[文章讲解](<https://programmercarl.com/0122.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BAII.html>)
 
-#### 思考
+## 思考
 
-##### 贪心解法
+### 贪心解法
 
 图形化的方式很好理解
 
@@ -46,9 +37,9 @@ tags:
 
 这意味着，只要明天这只股票是涨的，我今天就买，明天就卖，而不管后天如何变化，后天如果涨，那我明天卖了再买呗，如果后天跌了，正好明天我卖了后就不再买了。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {

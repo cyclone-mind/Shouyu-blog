@@ -13,16 +13,7 @@ tags:
   - Leetcode
 ---
 
-# 目标和
-
-**发布日期:** 2025/12/21
-**阅读时间:** 5 分钟
-**标签:** 算法笔记, 动态规划, 算法, 01背包, 回溯, Leetcode
-
-## 正文
-# 目标和
-
-#### 题目描述
+## 题目描述
 
 给你一个非负整数数组`nums`和一个整数`target`。
 
@@ -45,11 +36,11 @@ tags:
 +1 + 1 + 1 + 1 - 1 = 3
 ```
 
-题目链接：https://leetcode.cn/problems/target-sum
+[题目链接](https://leetcode.cn/problems/target-sum)
 
-文章讲解：https://programmercarl.com/0494.%E7%9B%AE%E6%A0%87%E5%92%8C.html
+[文章讲解](https://programmercarl.com/0494.%E7%9B%AE%E6%A0%87%E5%92%8C.html)
 
-#### 思路
+## 思路
 
 每个整数要不就是正的，要不就是负的。这也是一个决策的过程。符合**决策树模型**
 
@@ -75,25 +66,25 @@ target是固定的，sum是固定的，left就可以求出来。
 
 即，left有可能是小数，target + sum不能够被2整除。那么，这个时候拥有小数容量的背包是怎么装都装不满的。所以说，此时没有方案。
 
-```C++
+```cpp
 if ((target + sum) % 2 == 1) return 0; // 此时没有方案
 ```
 
 另外target的绝对值大于sum的话，意味着即使我们将`nums`数组中的所有数字都加上正号（得到最大的可能和`sum`），或者都加上负号（得到最小的可能和`-sum`），我们都无法达到`target`这个值。因为任何组合的和的绝对值都不可能超过`sum`。在这种情况下，函数直接返回`0`，
 
-```C++
+```cpp
 if(abs(target) > sum) return 0;
 ```
 
 所以说这道题，虽然是用物品来装背包，但是求的并非最多能装多少，而是恰好装满有多少种方法。而这其实就是一个组合问题了。
 
-#### 动规五部曲
+## 递归五部曲
 
-##### 1、dp数组及下标含义
+### 1、dp数组及下标含义
 
 `dp[i][j]`：使用 下标为 [0, i] 的 nums[i] 能够凑满 j（包括 j ）这么大容量的包，有`dp[i][j]`种方法。
 
-##### 2.、递推公式
+### 2.、递推公式
 
 考虑递推推公式的时候，先可以固定一个状态维度（容量）来考虑另一个维度的前一个状态（是否放物品 i ）会是什么样。
 
@@ -127,7 +118,7 @@ if(abs(target) > sum) return 0;
 
 不过写完这个之后，需要注意这个 j - nums[i] 不能小于0就行了。如果 nums[i] > j 那么就是背包里一定不妨物品 i ，那就是对应第一种情况。
 
-##### 3、dp数组初始化
+### 3、dp数组初始化
 
 从递推公式上看，I，J 由上方和左上方推出。所以要初始化第一层和第一列。
 
@@ -155,7 +146,7 @@ if(abs(target) > sum) return 0;
 
 其实就是算数组里有t个0，然后按照组合数量求，即 2^t 。
 
-```C++
+```cpp
 int zero_count = 0;
 for(int i = 0;i < nums.size();i++){
     if(nums[i] == 0) zero_count = 0;
@@ -163,20 +154,20 @@ for(int i = 0;i < nums.size();i++){
 }
 ```
 
-##### 4、确定遍历顺序
+### 4、确定遍历顺序
 
 从递推公式上看，遍历顺序应该是从上到下，从左到右。对于二维数组，先 从上到下 ，再从左到右遍历   还是先 从左到右，再从上到下 这两种顺序其实都可以。
 
 因为这两种顺序确保了之前的 i,j 之前的状态是存在的，`dp[i - 1][j]`+`dp[i - 1][j - nums[i]]`已有值，已经计算过。
 
-```C++
+```cpp
 for (int i = 1; i < nums.size(); i++) { // 行，遍历物品
     for (int j = 0; j <= bagSize; j++) { // 列，遍历背包
     }
 }
 ```
 
-##### 5、举例推导
+### 5、举例推导
 
 输入：nums: [1, 1, 1, 1, 1], target: 3
 
@@ -184,11 +175,11 @@ bagSize = (target + sum) / 2 = (3 + 5) / 2 = 4
 
 dp数组状态变化如下：
 
-#### 代码实现
+## 代码实现
 
 二维数组：
 
-```C++
+```cpp
 class Solution {
 public:
     int findTargetSumWays(vector<int>& nums, int target) {
@@ -236,7 +227,7 @@ public:
 
 遍历顺序，先物品，正序，再背包，倒序
 
-```C++
+```cpp
 class Solution {
 public:
     int findTargetSumWays(vector<int>& nums, int target) {
@@ -265,7 +256,7 @@ public:
 
 1. 处理零元素: 在计算出非零元素的所有组合后，它会考虑数组中的零。对于数组中的每一个零，我们都可以选择给它加上 +0 或 -0，这两种选择都不会改变总和，但会增加组合的可能性。如果有 zero_count 个零，那么每一种由非零元素组成的有效组合，都可以与这 zero_count 个零的 2^zero_count 种符号分配方式相结合。 因此，在初始化 dp 数组时，dp[0] 被设置为 pow(2, zero_count)。这意味着，在开始计算非零元素对 DP 表的影响之前，就已经为零元素的所有可能组合方式预留了基础。在后续的 DP 迭代中，会跳过零元素（if (nums[i] == 0) continue;），因为零对子集和本身没有贡献，其影响已在 dp[0] 的初始化中体现。
 
-```C++
+```cpp
 int findTargetSumWays(vector<int> &nums, int target) {
     int sum = 0;
     int zero_count = 0;

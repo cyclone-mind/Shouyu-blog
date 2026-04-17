@@ -13,22 +13,15 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 二叉树：101. 对称二叉树
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**标签:** 算法笔记, 二叉树, 代码随想录, 数据结构与算法, Leetcode
-
-## 正文
-#### 题目描述
+## 题目描述
 
 给你一个二叉树的根节点 root ， 检查它是否轴对称。
 
-题目链接：https://leetcode.cn/problems/symmetric-tree
+[题目链接](https://leetcode.cn/problems/symmetric-tree)
 
-文章讲解：https://programmercarl.com/0101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.html
+[文章讲解](https://programmercarl.com/0101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.html)
 
-#### 思路
+## 思路
 
 轴对称意味着根节点的左右两个子树是镜像的，是可以翻转的。两颗子树的外侧和内侧节点值全部相等。
 
@@ -50,9 +43,9 @@ tags:
 
 这种父节点的信息取决于子节点信息的情况就必须使用**后序遍历**！即先处理孩子，再处理自己。
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 class Solution {
 public:
     bool compare(TreeNode* left, TreeNode* right){

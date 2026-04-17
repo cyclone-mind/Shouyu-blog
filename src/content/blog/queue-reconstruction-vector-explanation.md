@@ -13,18 +13,9 @@ tags:
   - Leetcode
 ---
 
-# 根据身高重建队列(vector原理讲解)
+## list版本
 
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 贪心, 算法, 贪心算法, 数据结构, vector, list, 性能分析
-
-## 正文
-# 根据身高重建队列(vector原理讲解)
-
-#### list版本
-
-```C++
+```cpp
 vector<vector<int>> reconstructQueue(vector<vector<int>>& people) {
     sort(people.begin(), people.end(), cmp);
     
@@ -55,9 +46,9 @@ queue.insert(it, people[i])：O(1)时间
 
 1. 总体时间复杂度：O(n log n + n²) = O(n²)
 
-#### vector版本
+## vector版本
 
-```C++
+```cpp
 vector<vector<int>> reconstructQueue(vector<vector<int>>& people) {
     sort (people.begin(), people.end(), cmp);
     vector<vector<int>> que;
@@ -83,7 +74,7 @@ vector的insert操作需要将position之后的所有元素向后移动一位
 
 1. 总体时间复杂度：O(n log n + n²) = O(n²)
 
-#### 两个版本的比较
+## 两个版本的比较
 
 相同点：
 
@@ -102,7 +93,7 @@ vector版本：直接通过索引定位，但需要移动position个元素
 
 * vector版本：直接通过索引定位，但需要移动position个元素
 
-##### 为什么vector版本更耗时？
+### 为什么vector版本更耗时？
 
 内存访问模式差异：
 
@@ -143,7 +134,7 @@ list的节点分散，但操作简单
 
 如果要优化vector版本，可以考虑：
 
-```C++
+```cpp
 // 预先分配空间减少重新分配
 vector<vector<int>> que;
 que.reserve(people.size());  // 预分配空间

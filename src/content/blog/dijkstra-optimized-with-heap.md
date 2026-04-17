@@ -22,7 +22,7 @@ tags:
 ## 正文
 # Dijkstra堆优化版
 
-#### 题目描述
+## 题目描述
 
 小明是一位科学家，他需要参加一场重要的国际科学大会，以展示自己的最新研究成果。
 
@@ -30,11 +30,11 @@ tags:
 
 小明希望能选择一条花费时间最少的路线，以确保他能够尽快到达目的地。
 
-题目链接：https://kamacoder.com/problempage.php?pid=1047
+[题目链接](https://kamacoder.com/problempage.php?pid=1047)
 
-文章讲解：https://programmercarl.com/kamacoder/0047.%E5%8F%82%E4%BC%9Adijkstra%E6%9C%B4%E7%B4%A0.html
+[文章讲解](https://programmercarl.com/kamacoder/0047.%E5%8F%82%E4%BC%9Adijkstra%E6%9C%B4%E7%B4%A0.html)
 
-#### 思考
+## 思考
 
 堆优化 dijkstra。
 
@@ -131,9 +131,9 @@ Dijkstra 算法的三个核心步骤：
 
 * 堆：最多 $O(E)$ 个元素
 
-#### 代码实现
+## 代码实现
 
-```C++
+```cpp
 #include <iostream>
 #include <vector>
 #include <list>
