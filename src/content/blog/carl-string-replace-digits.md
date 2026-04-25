@@ -13,17 +13,6 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 字符串 卡码 替换数字
-
-**发布日期:** 2025/12/21
-**阅读时间:** 1 分钟
-**浏览次数:** 1
-**标签:** 算法笔记, 字符串, 代码随想录, 数据结构与算法, Leetcode
-
-## 摘要
-给定一个字符串 s，它包含小写字母和数字字符，请编写一个函数，将字符串中的字母字符保持不变，而将每个数字字符替换为 number。
-
-## 正文
 [题目链接](https://kamacoder.com/problempage.php?pid=1064)
 
 [文章讲解](https://programmercarl.com/kamacoder/0054.%E6%9B%BF%E6%8D%A2%E6%95%B0%E5%AD%97.html)

@@ -11,13 +11,6 @@ tags:
   - 市场报告
 ---
 
-# China-Mobile-Game-Overseas-Market-Report-in-China
-
-**发布日期:** 2025/12/21
-**阅读时间:** 4 分钟
-**浏览次数:** 1
-**标签:** Web开发
-
 ## 摘要
 中国移动游戏海外出海报告-2024
 

@@ -13,13 +13,6 @@ tags:
   - Leetcode
 ---
 
-# 代码随想录 栈与队列：20. 有效的括号
-
-**发布日期:** 2025/12/21
-**阅读时间:** 2 分钟
-**标签:** 算法笔记, 栈和队列, 代码随想录, 数据结构与算法, Leetcode, 栈, 队列
-
-## 正文
 [题目链接](https://leetcode.cn/problems/valid-parentheses/)
 
 [文章讲解](https://programmercarl.com/0020.%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7.html)
