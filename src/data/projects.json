@@ -1,4 +1,15 @@
-[{
+[
+  {
+    "id":"copy-midjourney",
+    "title": "复刻 midjourney-便携的文生图服务",
+    "description": "本项目旨在复刻 midjourney 的核心功能，接入 Minimax 的文生图 API 打造一个便携的文生图服务。核心在于实现高质量的图像生成，且无需营业执照，适合个人开发者。",
+    "year": 2026,
+    "status": "Completed",
+    "authors": ["cyclone-mind"],
+    "heroImage": "/src/assets/nature.png",
+    "link": "https://ai-images.microcyclone.cloud"
+},
+  {
     "id":"map-course",
     "title": "地图制作课程-一天完成 Sass 服务落地",
     "description": "本项目旨 vibe coding 快速落地一个真实的 Sass 服务（课程内容尚未开发）。核心在于订阅、支付相关的功能验证，且无需营业执照，适合个人开发者。",
@@ -6,7 +17,7 @@
     "status": "Completed",
     "authors": ["cyclone-mind"],
     "heroImage": "/src/assets/nature.png",
-    "link": "https://map-course.vercel.app/"
+    "link": "https://mapcourse.microcyclone.cloud/"
 },
   {
     "id":"coze-agent",
