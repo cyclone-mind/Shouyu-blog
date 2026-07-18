@@ -1,0 +1,847 @@
+[
+  {
+    "name": "OpenAI",
+    "origin": "international",
+    "marketsServed": ["international", "china"],
+    "description": "Creator of ChatGPT and the GPT series of models. Offers consumer ChatGPT plans and API pricing for developers.",
+    "homepage": "https://openai.com",
+    "plans": [
+      {
+        "name": "ChatGPT Free",
+        "type": "subscription",
+        "market": "international",
+        "price": "Free",
+        "description": "Basic access to GPT models on web and mobile",
+        "url": "https://openai.com/chatgpt/pricing"
+      },
+      {
+        "name": "ChatGPT Plus",
+        "type": "subscription",
+        "market": "international",
+        "price": "$20/mo",
+        "description": "Higher usage limits, access to latest models, DALL·E, browsing",
+        "url": "https://openai.com/chatgpt/pricing"
+      },
+      {
+        "name": "ChatGPT Pro",
+        "type": "subscription",
+        "market": "international",
+        "price": "$200/mo",
+        "description": "Unlimited access to OpenAI's best models including o1 pro mode",
+        "url": "https://openai.com/chatgpt/pricing"
+      },
+      {
+        "name": "ChatGPT Team",
+        "type": "subscription",
+        "market": "international",
+        "price": "$25/user/mo",
+        "description": "Team workspace with higher limits and admin controls",
+        "url": "https://openai.com/chatgpt/pricing"
+      },
+      {
+        "name": "Enterprise",
+        "type": "subscription",
+        "market": "international",
+        "price": "Custom",
+        "description": "Enterprise-grade security, SSO, audit logs, volume discounts",
+        "url": "https://openai.com/enterprise"
+      },
+      {
+        "name": "API (GPT-5.4)",
+        "type": "api",
+        "market": "international",
+        "price": "Input $2.50/MTok, Output $15.00/MTok",
+        "description": "Pay-as-you-go API access to GPT-5.4 and other models",
+        "url": "https://platform.openai.com"
+      }
+    ]
+  },
+  {
+    "name": "Anthropic",
+    "origin": "international",
+    "marketsServed": ["international"],
+    "description": "Creator of Claude AI family. Known for safety-focused development and advanced coding capabilities.",
+    "homepage": "https://anthropic.com",
+    "plans": [
+      {
+        "name": "Claude Free",
+        "type": "subscription",
+        "market": "international",
+        "price": "Free",
+        "description": "Basic Claude access on web and mobile",
+        "url": "https://claude.com/pricing"
+      },
+      {
+        "name": "Claude Pro",
+        "type": "subscription",
+        "market": "international",
+        "price": "$20/mo ($17/mo annual)",
+        "description": "More usage, Claude Code, Claude Cowork, Claude Design, Projects",
+        "url": "https://claude.com/pricing"
+      },
+      {
+        "name": "Claude Max",
+        "type": "subscription",
+        "market": "international",
+        "price": "$100-200/mo",
+        "description": "5x or 20x Pro usage, higher output limits, early access features",
+        "url": "https://claude.com/pricing"
+      },
+      {
+        "name": "Team",
+        "type": "subscription",
+        "market": "international",
+        "price": "$25/seat/mo ($20 annual)",
+        "description": "Team workspace with SSO, central billing, admin controls",
+        "url": "https://claude.com/pricing"
+      },
+      {
+        "name": "Enterprise",
+        "type": "subscription",
+        "market": "international",
+        "price": "Custom ($20/seat + usage)",
+        "description": "SCIM, audit logs, HIPAA, custom data retention, role-based access",
+        "url": "https://claude.com/pricing"
+      },
+      {
+        "name": "API (Claude Sonnet 4.6)",
+        "type": "api",
+        "market": "international",
+        "price": "Input $3/MTok, Output $15/MTok",
+        "description": "API access to Claude models. Prompt caching at $0.30/MTok read.",
+        "url": "https://platform.claude.com"
+      }
+    ]
+  },
+  {
+    "name": "Google",
+    "origin": "international",
+    "marketsServed": ["international", "china"],
+    "description": "Offers Gemini AI models through consumer subscriptions, Google Cloud, and developer APIs.",
+    "homepage": "https://deepmind.google",
+    "plans": [
+      {
+        "name": "Gemini Free",
+        "type": "subscription",
+        "market": "international",
+        "price": "Free",
+        "description": "Access to Gemini models with basic usage limits",
+        "url": "https://gemini.google/subscriptions/"
+      },
+      {
+        "name": "Google AI Plus",
+        "type": "subscription",
+        "market": "international",
+        "price": "$4.99/mo",
+        "description": "2x usage vs free, video generation, 400GB storage",
+        "url": "https://gemini.google/subscriptions/"
+      },
+      {
+        "name": "Google AI Pro",
+        "type": "subscription",
+        "market": "international",
+        "price": "$19.99/mo",
+        "description": "4x usage, Gemini 3.1 Pro, Deep Research, 5TB storage",
+        "url": "https://gemini.google/subscriptions/"
+      },
+      {
+        "name": "Google AI Ultra",
+        "type": "subscription",
+        "market": "international",
+        "price": "$99.99-199.99/mo",
+        "description": "20x usage, highest model access, Project Genie, 20TB+ storage",
+        "url": "https://gemini.google/subscriptions/"
+      },
+      {
+        "name": "Gemini API (Gemini 3 Flash)",
+        "type": "api",
+        "market": "international",
+        "price": "Input $0.50/MTok, Output $3.00/MTok",
+        "description": "Free tier available. Context caching and grounding available.",
+        "url": "https://ai.google.dev/gemini-api/docs/pricing"
+      }
+    ]
+  },
+  {
+    "name": "xAI",
+    "origin": "international",
+    "marketsServed": ["international"],
+    "description": "Elon Musk's AI company. Creator of the Grok model family.",
+    "homepage": "https://x.ai",
+    "plans": [
+      {
+        "name": "SuperGrok Lite",
+        "type": "subscription",
+        "market": "international",
+        "price": "$10/mo ($8.33/mo annual)",
+        "description": "2x longer conversations, AI agent on Expert mode, image & video generation",
+        "url": "https://x.ai/pricing"
+      },
+      {
+        "name": "SuperGrok",
+        "type": "subscription",
+        "market": "international",
+        "price": "$30/mo ($25/mo annual)",
+        "description": "5x longer conversations, 4x AI agents, lightning-fast replies, HD video",
+        "url": "https://x.ai/pricing"
+      },
+      {
+        "name": "Grok Business",
+        "type": "subscription",
+        "market": "international",
+        "price": "$30/seat/mo ($25 annual)",
+        "description": "Team workspace, centralized billing, SSO, data excluded from training",
+        "url": "https://x.ai/pricing"
+      },
+      {
+        "name": "API (Grok 4.5)",
+        "type": "api",
+        "market": "international",
+        "price": "Input $2/MTok, Output $6/MTok",
+        "description": "500K context, reasoning mode, voice & image APIs available",
+        "url": "https://docs.x.ai/developers/pricing"
+      }
+    ]
+  },
+  {
+    "name": "Mistral AI",
+    "origin": "international",
+    "marketsServed": ["international"],
+    "description": "French AI company offering open-weight and commercial models. Known for Mistral, Le Chat.",
+    "homepage": "https://mistral.ai",
+    "plans": [
+      {
+        "name": "Le Chat Free",
+        "type": "subscription",
+        "market": "international",
+        "price": "Free",
+        "description": "Frontier models, image generation, code interpreter, 40+ connectors (~25 msg/day)",
+        "url": "https://chat.mistral.ai"
+      },
+      {
+        "name": "Le Chat Pro",
+        "type": "subscription",
+        "market": "international",
+        "price": "$14.99/mo ($5.99 student)",
+        "description": "Extended thinking, deep research, all-day Mistral Vibe coding, no telemetry",
+        "url": "https://mistral.ai/pricing/"
+      },
+      {
+        "name": "Le Chat Team",
+        "type": "subscription",
+        "market": "international",
+        "price": "$24.99/user/mo",
+        "description": "Collaborative workspace, 30GB storage/user, admin controls",
+        "url": "https://mistral.ai/pricing/"
+      },
+      {
+        "name": "API (Mistral Large 3)",
+        "type": "api",
+        "market": "international",
+        "price": "Input $0.50/MTok, Output $1.50/MTok",
+        "description": "256K context. 90% cheaper than GPT-5.6. Prompt caching available.",
+        "url": "https://console.mistral.ai"
+      }
+    ]
+  },
+  {
+    "name": "Perplexity AI",
+    "origin": "international",
+    "marketsServed": ["international"],
+    "description": "AI-powered search engine combining LLM capabilities with real-time web search.",
+    "homepage": "https://perplexity.ai",
+    "plans": [
+      {
+        "name": "Perplexity Free",
+        "type": "subscription",
+        "market": "international",
+        "price": "Free",
+        "description": "Basic AI search with 5 Pro searches/day",
+        "url": "https://www.perplexity.ai/hub/pricing"
+      },
+      {
+        "name": "Perplexity Pro",
+        "type": "subscription",
+        "market": "international",
+        "price": "$20/mo",
+        "description": "Unlimited Pro searches, file uploads, top AI model choice, 10K/month space credits",
+        "url": "https://www.perplexity.ai/hub/pricing"
+      },
+      {
+        "name": "Perplexity Max",
+        "type": "subscription",
+        "market": "international",
+        "price": "$200/mo",
+        "description": "All advanced models, unlimited queries, priority support",
+        "url": "https://www.perplexity.ai/hub/pricing"
+      },
+      {
+        "name": "Enterprise Pro",
+        "type": "subscription",
+        "market": "international",
+        "price": "$34/seat/mo (annual)",
+        "description": "SOC 2, HIPAA, GDPR, SCIM, audit logs, data retention controls",
+        "url": "https://www.perplexity.ai/enterprise/pricing"
+      },
+      {
+        "name": "Enterprise Max",
+        "type": "subscription",
+        "market": "international",
+        "price": "$271/seat/mo (annual)",
+        "description": "Unlimited queries + advanced AI reasoning, priority features",
+        "url": "https://www.perplexity.ai/enterprise/pricing"
+      }
+    ]
+  },
+  {
+    "name": "DeepSeek (深度求索)",
+    "origin": "domestic",
+    "marketsServed": ["china", "international"],
+    "description": "Leading Chinese AI lab. Known for cost-effective open-source models with performance rivaling top US labs. V4-Pro is the industry price benchmark.",
+    "homepage": "https://deepseek.com",
+    "plans": [
+      {
+        "name": "DeepSeek Chat (网页/App)",
+        "type": "subscription",
+        "market": "china",
+        "price": "免费",
+        "description": "免费使用 DeepSeek 模型，支持文件上传、联网搜索",
+        "url": "https://chat.deepseek.com"
+      },
+      {
+        "name": "API (V4-Pro, 国内)",
+        "type": "api",
+        "market": "china",
+        "price": "输入 ¥3/百万tokens，输出 ¥6/百万tokens",
+        "description": "国产模型价格地板价。缓存命中输入仅 ¥0.025/百万tokens",
+        "url": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      {
+        "name": "API (V4-Flash",
+        "type": "api",
+        "market": "china",
+        "price": "输入 ¥1/MTok, 输出 ¥2/MTok",
+        "description": "V4-Flash 极致性价比，284B总参/13B活跃，1M上下文",
+        "url": "https://api-docs.deepseek.com/quick_start/pricing/"
+      },
+      {
+        "name": "API (V4-Pro, International)",
+        "type": "api",
+        "market": "international",
+        "price": "Input $0.435/MTok, Output $0.87/MTok",
+        "description": "1.6T param MoE, 1M context, 384K output. Cache hit at $0.0036/MTok.",
+        "url": "https://api-docs.deepseek.com/quick_start/pricing/"
+      }
+    ]
+  },
+  {
+    "name": "月之暗面 (Kimi)",
+    "origin": "domestic",
+    "marketsServed": ["china", "international"],
+    "description": "Developer of the Kimi AI assistant and K-series models. Known for long-context capabilities and agentic coding.",
+    "homepage": "https://kimi.com",
+    "plans": [
+      {
+        "name": "Kimi Adagio (免费版)",
+        "type": "subscription",
+        "market": "china",
+        "price": "免费",
+        "description": "基础对话，Agent 额度限 6 个，Kimi Code 不支持",
+        "url": "https://www.kimi.com/zh-cn/help/membership/membership-pricing"
+      },
+      {
+        "name": "Kimi Andante",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥49/月",
+        "description": "30 Agent 额度，1x Kimi Code 额度，Agent 4 倍速队列",
+        "url": "https://www.kimi.com/zh-cn/help/membership/membership-pricing"
+      },
+      {
+        "name": "Kimi Moderato",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥99/月",
+        "description": "60 Agent 额度，4x Kimi Code 额度，Agent 集群 25 次",
+        "url": "https://www.kimi.com/zh-cn/help/membership/membership-pricing"
+      },
+      {
+        "name": "Kimi Allegretto",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥199/月",
+        "description": "150 Agent 额度，20x Kimi Code，Kimi Claw 支持，4 子任务并行",
+        "url": "https://www.kimi.com/zh-cn/help/membership/membership-pricing"
+      },
+      {
+        "name": "Kimi Allegro",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥699/月",
+        "description": "360 Agent 额度，60x Kimi Code，Agent 集群 120 次，4 任务并行",
+        "url": "https://www.kimi.com/zh-cn/help/membership/membership-pricing"
+      },
+      {
+        "name": "API (Kimi K2.6)",
+        "type": "api",
+        "market": "china",
+        "price": "输入 ¥0.16-2.00/MTok(按上下文分档), 输出 ¥28.8/MTok",
+        "description": "缓存命中保底价 ¥0.07/MTok，编程 agent 场景首选，262K 上下文",
+        "url": "https://platform.moonshot.cn"
+      },
+      {
+        "name": "API (Kimi K2.6 International)",
+        "type": "api",
+        "market": "international",
+        "price": "Input $0.95/MTok, Output $4.00/MTok",
+        "description": "Cache hit $0.16/MTok. State-of-the-art coding, long-horizon execution, agent swarm.",
+        "url": "https://platform.moonshot.cn"
+      }
+    ]
+  },
+  {
+    "name": "阿里云 (通义千问 / 百炼)",
+    "origin": "domestic",
+    "marketsServed": ["china", "international"],
+    "description": "Alibaba's AI platform offering the Qwen model family. One of the most widely used Chinese models globally through open-source releases.",
+    "homepage": "https://tongyi.aliyun.com",
+    "plans": [
+      {
+        "name": "通义千问 免费版",
+        "type": "subscription",
+        "market": "china",
+        "price": "免费",
+        "description": "基础对话、文档处理、翻译，开通即送 100 万 tokens 免费额度",
+        "url": "https://www.aliyun.com/product/bailian"
+      },
+      {
+        "name": "百炼 Coding Plan Pro",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥200/月",
+        "description": "90,000次请求/月，可调用 Qwen3.5、GLM-5、Kimi-K2.5 等",
+        "url": "https://www.aliyun.com/product/bailian"
+      },
+      {
+        "name": "API (Qwen3.5-Plus, 国内)",
+        "type": "api",
+        "market": "china",
+        "price": "输入 ¥2.8/MTok, 输出 ¥17/MTok",
+        "description": "支持 1M 上下文分档计费，Batch 调用半价",
+        "url": "https://help.aliyun.com/zh/model-studio/model-pricing"
+      },
+      {
+        "name": "API (Qwen3 Max International)",
+        "type": "api",
+        "market": "international",
+        "price": "Input $0.78/MTok, Output $3.90/MTok",
+        "description": "Frontier model, strong reasoning & multilingual, available via Alibaba Cloud",
+        "url": "https://www.alibabacloud.com/help/zh/model-studio/model-pricing"
+      }
+    ]
+  },
+  {
+    "name": "百度 (文心一言 / 千帆)",
+    "origin": "domestic",
+    "marketsServed": ["china"],
+    "description": "Baidu's AI platform featuring the ERNIE model family. Offers both consumer chatbot and enterprise API services.",
+    "homepage": "https://yiyan.baidu.com",
+    "plans": [
+      {
+        "name": "文心一言 免费版",
+        "type": "subscription",
+        "market": "china",
+        "price": "免费",
+        "description": "基础对话和创作功能，每日免费额度",
+        "url": "https://cloud.baidu.com/product-s/qianfan_home"
+      },
+      {
+        "name": "千帆 Token Plan 企业版",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥149-989/月",
+        "description": "轻享版/标准版/高级版三档，按席位包月订阅",
+        "url": "https://cloud.baidu.com/doc/qianfan/s/ymq8wwch2"
+      },
+      {
+        "name": "千帆 Coding Plan",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥40/月",
+        "description": "编程专用，支持 DeepSeek、Kimi、GLM 等多模型",
+        "url": "https://cloud.baidu.com/doc/qianfan/s/ymq8wwch2"
+      },
+      {
+        "name": "API (ERNIE 4.5/5.0)",
+        "type": "api",
+        "market": "china",
+        "price": "输入 ¥4/百万tokens, 输出 ¥16/百万tokens",
+        "description": "按量后付费，支持批量推理折扣",
+        "url": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya"
+      }
+    ]
+  },
+  {
+    "name": "字节跳动 (豆包 / 火山方舟)",
+    "origin": "domestic",
+    "marketsServed": ["china"],
+    "description": "ByteDance's AI platform. Offers the Doubao consumer chatbot and Volcengine Ark enterprise API platform.",
+    "homepage": "https://www.doubao.com",
+    "plans": [
+      {
+        "name": "豆包 免费版",
+        "type": "subscription",
+        "market": "china",
+        "price": "免费",
+        "description": "基础 AI 对话和创作功能，赠送免费体验额度",
+        "url": "https://www.volcengine.com/product/ark"
+      },
+      {
+        "name": "火山方舟 Coding Plan Lite",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥40/月 (首月 ¥8.9)",
+        "description": "18,000次请求/月，支持 Auto 模式调度多模型，兼容 Cursor/Claude Code",
+        "url": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      {
+        "name": "火山方舟 Coding Plan Pro",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥200/月",
+        "description": "90,000次请求/月，更高 TPM，适合高频开发者",
+        "url": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      {
+        "name": "API (Doubao-Seed-2.0-pro)",
+        "type": "api",
+        "market": "china",
+        "price": "输入 ¥3.2/MTok, 输出 ¥16/MTok (0-32K)",
+        "description": "长上下文分档计费，256K 上下文，支持 Batch 半价",
+        "url": "https://www.volcengine.com/docs/82379/1544106"
+      }
+    ]
+  },
+  {
+    "name": "腾讯 (混元 / Hunyuan)",
+    "origin": "domestic",
+    "marketsServed": ["china"],
+    "description": "Tencent's AI platform with the Hunyuan (混元) model family. Known for the HY-3 model series.",
+    "homepage": "https://hunyuan.tencent.com",
+    "plans": [
+      {
+        "name": "混元 免费版",
+        "type": "subscription",
+        "market": "china",
+        "price": "免费",
+        "description": "基础 AI 对话能力，开通即送 100 万 tokens 免费额度",
+        "url": "https://cloud.tencent.com/document/product/1729/97731"
+      },
+      {
+        "name": "TokenHub Coding Plan",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥40/月 (首月 ¥7.9)",
+        "description": "18,000次请求/月，支持 HY 2.0、GLM-5、DeepSeek 等多模型",
+        "url": "https://cloud.tencent.com/document/product/1729/97731"
+      },
+      {
+        "name": "TokenHub Token Plan 专业套餐",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥200/月",
+        "description": "企业级积分池，按模型单价实时扣减，团队管理",
+        "url": "https://cloud.tencent.com/document/product/1729/97731"
+      },
+      {
+        "name": "API (Hy3 / 混元 TurboS)",
+        "type": "api",
+        "market": "china",
+        "price": "输入 ¥1/百万tokens, 输出 ¥4/百万tokens (Hy3)",
+        "description": "Hy3 旗舰模型，缓存命中 75% 折扣，支持 Batch",
+        "url": "https://cloud.tencent.com/document/product/1729/97731"
+      }
+    ]
+  },
+  {
+    "name": "智谱AI (GLM)",
+    "origin": "domestic",
+    "marketsServed": ["china"],
+    "description": "One of China's leading AI labs. Creator of the GLM (ChatGLM) model family. Known for strong structured reasoning.",
+    "homepage": "https://z.ai",
+    "plans": [
+      {
+        "name": "智谱清言 免费版",
+        "type": "subscription",
+        "market": "china",
+        "price": "免费",
+        "description": "基础 GLM 模型对话，GLM-4.7-Flash 免费调用",
+        "url": "https://bigmodel.cn/pricing"
+      },
+      {
+        "name": "GLM Coding Plan Lite",
+        "type": "subscription",
+        "market": "china",
+        "price": "~¥72/月 (季付 $30)",
+        "description": "~400 prompts/周，支持 GLM-5.2、GLM-5-Turbo、GLM-4.7，兼容 Claude Code",
+        "url": "https://bigmodel.cn/pricing"
+      },
+      {
+        "name": "GLM Coding Plan Pro",
+        "type": "subscription",
+        "market": "china",
+        "price": "~¥216/月 (季付 $90)",
+        "description": "~2000 prompts/周，支持 GLM-5 旗舰，5 倍 Lite 额度",
+        "url": "https://bigmodel.cn/pricing"
+      },
+      {
+        "name": "GLM Coding Plan Max",
+        "type": "subscription",
+        "market": "china",
+        "price": "~¥576/月 (季付 $240)",
+        "description": "~8000 prompts/周，4 倍 Pro 额度，高峰期资源保障",
+        "url": "https://bigmodel.cn/pricing"
+      },
+      {
+        "name": "API (GLM-5.2)",
+        "type": "api",
+        "market": "china",
+        "price": "输入 ¥10.1/MTok, 输出 ¥31.7/MTok",
+        "description": "GLM 最新旗舰，对标 Claude Opus，203K 上下文，推理能力最强",
+        "url": "https://bigmodel.cn/pricing"
+      }
+    ]
+  },
+  {
+    "name": "MiniMax",
+    "origin": "domestic",
+    "marketsServed": ["china", "international"],
+    "description": "Chinese AI startup known for the MiniMax model family and Hailuo AI video generation. Offers extremely competitive API pricing.",
+    "homepage": "https://minimax.com",
+    "plans": [
+      {
+        "name": "MiniMax Token Plan Plus",
+        "type": "subscription",
+        "market": "international",
+        "price": "$20/月",
+        "description": "~1.7B tokens/月 M3 用量，3-4 Agent 并发，个人项目",
+        "url": "https://platform.minimax.io/subscribe/token-plan"
+      },
+      {
+        "name": "MiniMax Token Plan Max",
+        "type": "subscription",
+        "market": "international",
+        "price": "$50/月",
+        "description": "~5.1B tokens/月 M3 用量，4-5 Agent 并发，专业日常开发",
+        "url": "https://platform.minimax.io/subscribe/token-plan"
+      },
+      {
+        "name": "MiniMax Token Plan Ultra",
+        "type": "subscription",
+        "market": "international",
+        "price": "$120/月",
+        "description": "~12.5B tokens/月 M3 用量，6-7 Agent 并发，团队重度使用",
+        "url": "https://platform.minimax.io/subscribe/token-plan"
+      },
+      {
+        "name": "API (MiniMax M3)",
+        "type": "api",
+        "market": "international",
+        "price": "Input $0.30/MTok, Output $1.20/MTok (≤512K)",
+        "description": "1M context, 50% permanent discount. Text, image, speech, music APIs.",
+        "url": "https://platform.minimax.io/docs/pricing/overview"
+      }
+    ]
+  },
+  {
+    "name": "科大讯飞 (星火)",
+    "origin": "domestic",
+    "marketsServed": ["china"],
+    "description": "iFlytek's Spark (星火) model family. Strong in education, voice, and government AI applications.",
+    "homepage": "https://xinghuo.xfyun.cn",
+    "plans": [
+      {
+        "name": "星火 免费版",
+        "type": "subscription",
+        "market": "china",
+        "price": "免费",
+        "description": "基础对话和语音能力，赠送免费体验额度",
+        "url": "https://xinghuo.xfyun.cn/pricing"
+      },
+      {
+        "name": "星火 API Token 包",
+        "type": "api",
+        "market": "china",
+        "price": "~¥25-60/百万tokens",
+        "description": "不区分输入输出，按 token 包计费，Lite 免费",
+        "url": "https://xinghuo.xfyun.cn/pricing"
+      },
+      {
+        "name": "星火 X1 API",
+        "type": "api",
+        "market": "china",
+        "price": "~¥4/百万tokens",
+        "description": "深度推理大模型，国产算力训练，支持思考链",
+        "url": "https://xinghuo.xfyun.cn/pricing"
+      }
+    ]
+  },
+  {
+    "name": "商汤科技 (日日新)",
+    "origin": "domestic",
+    "marketsServed": ["china"],
+    "description": "SenseTime's SenseNova (日日新) model family. Leverages SenseTime's deep computer vision expertise.",
+    "homepage": "https://www.sensecore.com",
+    "plans": [
+      {
+        "name": "API (SenseNova V6.5 Pro)",
+        "type": "api",
+        "market": "china",
+        "price": "~¥9/百万tokens",
+        "description": "多模态能力突出，价格持续优化",
+        "url": "https://platform.sensenova.cn"
+      }
+    ]
+  },
+  {
+    "name": "百川智能 (Baichuan)",
+    "origin": "domestic",
+    "marketsServed": ["china"],
+    "description": "AI startup founded by Sogou founder Wang Xiaochuan. Developing the Baichuan series of models.",
+    "homepage": "https://baichuan-ai.com",
+    "plans": [
+      {
+        "name": "API (Baichuan 系列)",
+        "type": "api",
+        "market": "china",
+        "price": "API 按量计费",
+        "description": "百川大模型系列，支持对话和垂直场景",
+        "url": "https://platform.baichuan-ai.com"
+      }
+    ]
+  },
+  {
+    "name": "零一万物 (Yi)",
+    "origin": "domestic",
+    "marketsServed": ["china", "international"],
+    "description": "AI startup founded by Lee Kai-fu (Sinovation Ventures). Known for the Yi series of open-source models.",
+    "homepage": "https://01.ai",
+    "plans": [
+      {
+        "name": "API (Yi 系列)",
+        "type": "api",
+        "market": "international",
+        "price": "API 按量计费",
+        "description": "Yi 系列模型，支持开源和商业版本",
+        "url": "https://platform.lingyiwanwu.com"
+      }
+    ]
+  },
+  {
+    "name": "阶跃星辰 (StepFun)",
+    "origin": "domestic",
+    "marketsServed": ["china"],
+    "description": "Chinese AI startup developing the Step series of foundation models.",
+    "homepage": "https://stepfun.com",
+    "plans": [
+      {
+        "name": "API (Step 系列)",
+        "type": "api",
+        "market": "china",
+        "price": "API 按量计费",
+        "description": "Step 系列大模型 API 服务",
+        "url": "https://platform.stepfun.com"
+      }
+    ]
+  },
+  {
+    "name": "小米 (MiMo)",
+    "origin": "domestic",
+    "marketsServed": ["china", "international"],
+    "description": "Xiaomi's AI model family. Known for ultra-long context (1M tokens) and aggressive permanent pricing cuts.",
+    "homepage": "https://cloud.xiaomi.com",
+    "plans": [
+      {
+        "name": "MiMo Token Plan Lite",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥39/月 ($6/月)",
+        "description": "4.1B Credits/月，支持 V2.5 全系列模型，AI 编程工具兼容",
+        "url": "https://mimo.mi.com/docs/zh-CN/price/token-plan"
+      },
+      {
+        "name": "MiMo Token Plan Standard",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥99/月 ($16/月)",
+        "description": "11B Credits/月，适合日常开发，夜间 0.8 倍消耗",
+        "url": "https://mimo.mi.com/docs/zh-CN/price/token-plan"
+      },
+      {
+        "name": "MiMo Token Plan Pro",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥329/月 ($50/月)",
+        "description": "38B Credits/月，高频开发场景，连续包年 88 折",
+        "url": "https://mimo.mi.com/docs/zh-CN/price/token-plan"
+      },
+      {
+        "name": "API (MiMo V2.5 Pro, 国内)",
+        "type": "api",
+        "market": "china",
+        "price": "输入 ¥3/MTok, 输出 ¥6/MTok",
+        "description": "1M 上下文统一费率，缓存命中 ¥0.025/MTok",
+        "url": "https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go"
+      },
+      {
+        "name": "API (MiMo V2.5 Pro International)",
+        "type": "api",
+        "market": "international",
+        "price": "Input $0.435/MTok, Output $0.87/MTok",
+        "description": "1M context, cache hit $0.0036/MTok. OpenAI/Anthropic compatible.",
+        "url": "https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go"
+      }
+    ]
+  },
+  {
+    "name": "优刻得 (UCloud Coding Plan)",
+    "origin": "domestic",
+    "marketsServed": ["china"],
+    "description": "UCloud offers an aggregated Coding Plan that pools multiple top Chinese models under one subscription. Not a model creator but an aggregator.",
+    "homepage": "https://ucloud.cn",
+    "plans": [
+      {
+        "name": "超值体验包",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥6.9",
+        "description": "新人专享，2900万积分，聚合 DeepSeek、GLM、Kimi、MiniMax",
+        "url": "https://www.compshare.cn/coding-plan"
+      },
+      {
+        "name": "包月畅享包 Lite",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥49.9/月",
+        "description": "700万积分/日，不限使用场景，允许 API 调用",
+        "url": "https://www.compshare.cn/coding-plan"
+      },
+      {
+        "name": "包月畅享包 Plus",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥199/月",
+        "description": "2800万积分/日，支持 Cursor/Claude Code/Codex 等工具",
+        "url": "https://www.compshare.cn/coding-plan"
+      },
+      {
+        "name": "包月畅享包 Pro",
+        "type": "subscription",
+        "market": "china",
+        "price": "¥499/月",
+        "description": "7000万积分/日，16 个全球模型，不限调用场景",
+        "url": "https://www.compshare.cn/coding-plan"
+      }
+    ]
+  }
+]
