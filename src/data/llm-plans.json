@@ -2,7 +2,10 @@
   {
     "name": "OpenAI",
     "origin": "international",
-    "marketsServed": ["international", "china"],
+    "marketsServed": [
+      "international",
+      "china"
+    ],
     "description": "Creator of ChatGPT and the GPT series of models. Offers consumer ChatGPT plans and API pricing for developers.",
     "homepage": "https://openai.com",
     "plans": [
@@ -59,7 +62,9 @@
   {
     "name": "Anthropic",
     "origin": "international",
-    "marketsServed": ["international"],
+    "marketsServed": [
+      "international"
+    ],
     "description": "Creator of Claude AI family. Known for safety-focused development and advanced coding capabilities.",
     "homepage": "https://anthropic.com",
     "plans": [
@@ -116,7 +121,10 @@
   {
     "name": "Google",
     "origin": "international",
-    "marketsServed": ["international", "china"],
+    "marketsServed": [
+      "international",
+      "china"
+    ],
     "description": "Offers Gemini AI models through consumer subscriptions, Google Cloud, and developer APIs.",
     "homepage": "https://deepmind.google",
     "plans": [
@@ -165,7 +173,9 @@
   {
     "name": "xAI",
     "origin": "international",
-    "marketsServed": ["international"],
+    "marketsServed": [
+      "international"
+    ],
     "description": "Elon Musk's AI company. Creator of the Grok model family.",
     "homepage": "https://x.ai",
     "plans": [
@@ -206,7 +216,9 @@
   {
     "name": "Mistral AI",
     "origin": "international",
-    "marketsServed": ["international"],
+    "marketsServed": [
+      "international"
+    ],
     "description": "French AI company offering open-weight and commercial models. Known for Mistral, Le Chat.",
     "homepage": "https://mistral.ai",
     "plans": [
@@ -247,7 +259,9 @@
   {
     "name": "Perplexity AI",
     "origin": "international",
-    "marketsServed": ["international"],
+    "marketsServed": [
+      "international"
+    ],
     "description": "AI-powered search engine combining LLM capabilities with real-time web search.",
     "homepage": "https://perplexity.ai",
     "plans": [
@@ -296,7 +310,10 @@
   {
     "name": "DeepSeek (深度求索)",
     "origin": "domestic",
-    "marketsServed": ["china", "international"],
+    "marketsServed": [
+      "china",
+      "international"
+    ],
     "description": "Leading Chinese AI lab. Known for cost-effective open-source models with performance rivaling top US labs. V4-Pro is the industry price benchmark.",
     "homepage": "https://deepseek.com",
     "plans": [
@@ -337,7 +354,10 @@
   {
     "name": "月之暗面 (Kimi)",
     "origin": "domestic",
-    "marketsServed": ["china", "international"],
+    "marketsServed": [
+      "china",
+      "international"
+    ],
     "description": "Developer of the Kimi AI assistant and K-series models. Known for long-context capabilities and agentic coding.",
     "homepage": "https://kimi.com",
     "plans": [
@@ -402,7 +422,10 @@
   {
     "name": "阿里云 (通义千问 / 百炼)",
     "origin": "domestic",
-    "marketsServed": ["china", "international"],
+    "marketsServed": [
+      "china",
+      "international"
+    ],
     "description": "Alibaba's AI platform offering the Qwen model family. One of the most widely used Chinese models globally through open-source releases.",
     "homepage": "https://tongyi.aliyun.com",
     "plans": [
@@ -443,7 +466,9 @@
   {
     "name": "百度 (文心一言 / 千帆)",
     "origin": "domestic",
-    "marketsServed": ["china"],
+    "marketsServed": [
+      "china"
+    ],
     "description": "Baidu's AI platform featuring the ERNIE model family. Offers both consumer chatbot and enterprise API services.",
     "homepage": "https://yiyan.baidu.com",
     "plans": [
@@ -484,7 +509,9 @@
   {
     "name": "字节跳动 (豆包 / 火山方舟)",
     "origin": "domestic",
-    "marketsServed": ["china"],
+    "marketsServed": [
+      "china"
+    ],
     "description": "ByteDance's AI platform. Offers the Doubao consumer chatbot and Volcengine Ark enterprise API platform.",
     "homepage": "https://www.doubao.com",
     "plans": [
@@ -525,7 +552,9 @@
   {
     "name": "腾讯 (混元 / Hunyuan)",
     "origin": "domestic",
-    "marketsServed": ["china"],
+    "marketsServed": [
+      "china"
+    ],
     "description": "Tencent's AI platform with the Hunyuan (混元) model family. Known for the HY-3 model series.",
     "homepage": "https://hunyuan.tencent.com",
     "plans": [
@@ -566,7 +595,9 @@
   {
     "name": "智谱AI (GLM)",
     "origin": "domestic",
-    "marketsServed": ["china"],
+    "marketsServed": [
+      "china"
+    ],
     "description": "One of China's leading AI labs. Creator of the GLM (ChatGLM) model family. Known for strong structured reasoning.",
     "homepage": "https://z.ai",
     "plans": [
@@ -606,7 +637,7 @@
         "name": "API (GLM-5.2)",
         "type": "api",
         "market": "china",
-        "price": "输入 ¥10.1/MTok, 输出 ¥31.7/MTok",
+        "price": "输入 ¥8/MTok, 输出 ¥28/MTok",
         "description": "GLM 最新旗舰，对标 Claude Opus，203K 上下文，推理能力最强",
         "url": "https://bigmodel.cn/pricing"
       }
@@ -615,7 +646,10 @@
   {
     "name": "MiniMax",
     "origin": "domestic",
-    "marketsServed": ["china", "international"],
+    "marketsServed": [
+      "china",
+      "international"
+    ],
     "description": "Chinese AI startup known for the MiniMax model family and Hailuo AI video generation. Offers extremely competitive API pricing.",
     "homepage": "https://minimax.com",
     "plans": [
@@ -656,7 +690,9 @@
   {
     "name": "科大讯飞 (星火)",
     "origin": "domestic",
-    "marketsServed": ["china"],
+    "marketsServed": [
+      "china"
+    ],
     "description": "iFlytek's Spark (星火) model family. Strong in education, voice, and government AI applications.",
     "homepage": "https://xinghuo.xfyun.cn",
     "plans": [
@@ -689,7 +725,9 @@
   {
     "name": "商汤科技 (日日新)",
     "origin": "domestic",
-    "marketsServed": ["china"],
+    "marketsServed": [
+      "china"
+    ],
     "description": "SenseTime's SenseNova (日日新) model family. Leverages SenseTime's deep computer vision expertise.",
     "homepage": "https://www.sensecore.com",
     "plans": [
@@ -706,7 +744,9 @@
   {
     "name": "百川智能 (Baichuan)",
     "origin": "domestic",
-    "marketsServed": ["china"],
+    "marketsServed": [
+      "china"
+    ],
     "description": "AI startup founded by Sogou founder Wang Xiaochuan. Developing the Baichuan series of models.",
     "homepage": "https://baichuan-ai.com",
     "plans": [
@@ -723,7 +763,10 @@
   {
     "name": "零一万物 (Yi)",
     "origin": "domestic",
-    "marketsServed": ["china", "international"],
+    "marketsServed": [
+      "china",
+      "international"
+    ],
     "description": "AI startup founded by Lee Kai-fu (Sinovation Ventures). Known for the Yi series of open-source models.",
     "homepage": "https://01.ai",
     "plans": [
@@ -740,7 +783,9 @@
   {
     "name": "阶跃星辰 (StepFun)",
     "origin": "domestic",
-    "marketsServed": ["china"],
+    "marketsServed": [
+      "china"
+    ],
     "description": "Chinese AI startup developing the Step series of foundation models.",
     "homepage": "https://stepfun.com",
     "plans": [
@@ -757,7 +802,10 @@
   {
     "name": "小米 (MiMo)",
     "origin": "domestic",
-    "marketsServed": ["china", "international"],
+    "marketsServed": [
+      "china",
+      "international"
+    ],
     "description": "Xiaomi's AI model family. Known for ultra-long context (1M tokens) and aggressive permanent pricing cuts.",
     "homepage": "https://cloud.xiaomi.com",
     "plans": [
@@ -806,7 +854,9 @@
   {
     "name": "优刻得 (UCloud Coding Plan)",
     "origin": "domestic",
-    "marketsServed": ["china"],
+    "marketsServed": [
+      "china"
+    ],
     "description": "UCloud offers an aggregated Coding Plan that pools multiple top Chinese models under one subscription. Not a model creator but an aggregator.",
     "homepage": "https://ucloud.cn",
     "plans": [

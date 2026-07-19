@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# python and script virtual environments / cache
+scripts/venv/
+scripts/chrome_data/
+__pycache__/
+
