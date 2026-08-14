@@ -345,7 +345,7 @@
         "name": "API (V4-Pro, International)",
         "type": "api",
         "market": "international",
-        "price": "Input $0.435/MTok, Output $0.87/MTok",
+        "price": "Input $1/MTok, Output $0.87/MTok",
         "description": "1.6T param MoE, 1M context, 384K output. Cache hit at $0.0036/MTok.",
         "url": "https://api-docs.deepseek.com/quick_start/pricing/"
       }
