@@ -329,7 +329,7 @@
         "name": "API (V4-Pro, 国内)",
         "type": "api",
         "market": "china",
-        "price": "输入 ¥3/百万tokens，输出 ¥6/百万tokens",
+        "price": "输入 ¥4.5/百万tokens，输出 ¥13.5/百万tokens",
         "description": "国产模型价格地板价。缓存命中输入仅 ¥0.025/百万tokens",
         "url": "https://api-docs.deepseek.com/quick_start/pricing/"
       },
@@ -337,7 +337,7 @@
         "name": "API (V4-Flash",
         "type": "api",
         "market": "china",
-        "price": "输入 ¥1/MTok, 输出 ¥2/MTok",
+        "price": "输入 ¥1.5/MTok, 输出 ¥4.5/MTok",
         "description": "V4-Flash 极致性价比，284B总参/13B活跃，1M上下文",
         "url": "https://api-docs.deepseek.com/quick_start/pricing/"
       },
@@ -345,7 +345,7 @@
         "name": "API (V4-Pro, International)",
         "type": "api",
         "market": "international",
-        "price": "Input $1/MTok, Output $0.87/MTok",
+        "price": "Input $0.66/MTok, Output $1.98/MTok",
         "description": "1.6T param MoE, 1M context, 384K output. Cache hit at $0.0036/MTok.",
         "url": "https://api-docs.deepseek.com/quick_start/pricing/"
       }
