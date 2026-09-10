@@ -337,7 +337,7 @@
         "name": "API (V4-Flash",
         "type": "api",
         "market": "china",
-        "price": "输入 ¥1.5/MTok, 输出 ¥4.5/MTok",
+        "price": "输入 ¥1/MTok, 输出 ¥4/MTok",
         "description": "V4-Flash 极致性价比，284B总参/13B活跃，1M上下文",
         "url": "https://api-docs.deepseek.com/quick_start/pricing/"
       },
